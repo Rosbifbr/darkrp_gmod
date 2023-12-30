@@ -1,0 +1,204 @@
+--[[---------------------------------------------------------------------------
+DarkRP custom jobs
+---------------------------------------------------------------------------
+This file contains your custom jobs.
+This file should also contain jobs from DarkRP that you edited.
+
+Note: If you want to edit a default DarkRP job, first disable it in darkrp_config/disabled_defaults.lua
+      Once you've done that, copy and paste the job to this file and edit it.
+
+The default jobs can be found here:
+https://github.com/FPtje/DarkRP/blob/master/gamemode/config/jobrelated.lua
+
+For examples and explanation please visit this wiki page:
+https://darkrp.miraheze.org/wiki/DarkRP:CustomJobFields
+
+Add your custom jobs under the following line:
+---------------------------------------------------------------------------]]
+
+
+
+--[[---------------------------------------------------------------------------
+Define which team joining players spawn into and what team you change to if demoted
+---------------------------------------------------------------------------]]
+GAMEMODE.DefaultTeam = TEAM_CITIZEN
+--[[---------------------------------------------------------------------------
+Define which teams belong to civil protection
+Civil protection can set warrants, make people wanted and do some other police related things
+---------------------------------------------------------------------------]]
+GAMEMODE.CivilProtection = {
+    [TEAM_POLICE] = true,
+    [TEAM_CHIEF] = true,
+    [TEAM_MAYOR] = true,
+}
+--[[---------------------------------------------------------------------------
+Jobs that are hitmen (enables the hitman menu)
+---------------------------------------------------------------------------]]
+DarkRP.addHitmanTeam(TEAM_MOB)
+--NORMAL
+TEAM_CITIZEN = DarkRP.createJob("Civilian", {
+    color = Color(0, 255, 0, 255),
+    model = {
+        'models/smalls_civilians/pack1/hoodie_male_09_f_npc.mdl', 
+        'models/smalls_civilians/pack1/hoodie_male_01_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_02_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_03_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_04_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_05_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_07_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_09_f_npc.mdl',
+        'models/smalls_civilians/pack1/puffer_male_01_f_npc.mdl',
+        'models/smalls_civilians/pack1/puffer_male_02_f_npc.mdl',
+        'models/smalls_civilians/pack1/puffer_male_03_f_npc.mdl',
+        'models/smalls_civilians/pack1/puffer_male_04_f_npc.mdl',
+        'models/smalls_civilians/pack1/puffer_male_05_f_npc.mdl',
+        'models/smalls_civilians/pack1/puffer_male_07_f_npc.mdl',
+        'models/smalls_civilians/pack1/puffer_male_09_f_npc.mdl',
+        'models/smalls_civilians/pack1/zipper_female_01_f_npc.mdl',
+        'models/smalls_civilians/pack1/zipper_female_02_f_npc.mdl',
+        'models/smalls_civilians/pack1/zipper_female_03_f_npc.mdl',
+        'models/smalls_civilians/pack1/zipper_female_04_f_npc.mdl',
+        'models/smalls_civilians/pack1/zipper_female_06_f_npc.mdl',
+        'models/smalls_civilians/pack1/zipper_female_07_f_npc.mdl',
+        'models/humans/group02/tale_01.mdl',
+        'models/humans/group02/tale_03.mdl',
+        'models/humans/group02/tale_04.mdl',
+        'models/humans/group02/tale_05.mdl',
+        'models/humans/group02/tale_06.mdl',
+        'models/humans/group02/tale_07.mdl',
+        'models/humans/group02/tale_08.mdl',
+        'models/humans/group02/tale_09.mdl',
+        'models/humans/group02/temale_01.mdl',
+        'models/humans/group02/temale_02.mdl',
+        'models/humans/group02/temale_07.mdl',
+     },
+    description = [[You are simply a regular nigga]],
+    weapons = {},
+    command = "citizen",
+    max = 0,
+    salary = 45,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+})
+
+TEAM_POLICE = DarkRP.createJob("Militia", {
+    color = Color(25, 25, 170, 255),
+    model = {
+        'models/player/kerry/policeru_01.mdl',
+        'models/player/kerry/policeru_02.mdl',
+        'models/player/kerry/policeru_03.mdl',
+        'models/player/kerry/policeru_04.mdl',
+        'models/player/kerry/policeru_05.mdl',
+        'models/player/kerry/policeru_01_patrol.mdl',
+        'models/player/kerry/policeru_02_patrol.mdl',
+        'models/player/kerry/policeru_03_patrol.mdl',
+        'models/player/kerry/policeru_04_patrol.mdl',
+        'models/player/kerry/policeru_05_patrol.mdl',
+    },
+    description = [[The protector of every citizen that lives in the city.
+        You have the power to arrest criminals and protect innocents.
+        Hit a player with your arrest baton to put them in jail.
+        Bash a player with a stunstick and they may learn to obey the law.
+        The Battering Ram can break down the door of a criminal, with a warrant for their arrest.
+        The Battering Ram can also unfreeze frozen props (if enabled).
+        Type /wanted <name> to alert the public to the presence of a criminal.]],
+    weapons = {"arrest_stick", "unarrest_stick", "weapon_glock2", "stunstick", "door_ram", "weaponchecker"},
+    command = "cp",
+    max = 4,
+    salary = GAMEMODE.Config.normalsalary * 1.45,
+    admin = 0,
+    vote = true,
+    hasLicense = true,
+    ammo = {
+        ["pistol"] = 60,
+    },
+    category = "Civil Protection",
+})
+
+TEAM_CHIEF = DarkRP.createJob("Sheriff", {
+    color = Color(20, 20, 255, 255),
+    model = {
+        'models/player/kerry/policeru_01_omon.mdl',
+        'models/player/kerry/policeru_02_omon.mdl',
+        'models/player/kerry/policeru_03_omon.mdl',
+        'models/player/kerry/policeru_04_omon.mdl',
+        'models/player/kerry/policeru_05_omon.mdl',
+    },
+    description = [[The Chief is the leader of the Civil Protection unit.
+        Coordinate the police force to enforce law in the city.
+        Hit a player with arrest baton to put them in jail.
+        Bash a player with a stunstick and they may learn to obey the law.
+        The Battering Ram can break down the door of a criminal, with a warrant for their arrest.
+        Type /wanted <name> to alert the public to the presence of a criminal.
+        Type /jailpos to set the Jail Position]],
+    weapons = {"arrest_stick", "unarrest_stick", "weapon_deagle2", "stunstick", "door_ram", "weaponchecker"}, --TODO:
+    command = "chief",
+    max = 1,
+    salary = GAMEMODE.Config.normalsalary * 1.67,
+    admin = 0,
+    vote = false,
+    hasLicense = true,
+    chief = true,
+    NeedToChangeFrom = TEAM_POLICE,
+    ammo = {
+        ["pistol"] = 60,
+    },
+    category = "Civil Protection",
+})
+
+--CRIME
+
+TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
+	color = Color(80, 45, 0, 255),
+	model = "models/Eli.mdl",
+	description = [[You're a drug dealiner]],
+	weapons = {},
+	command = "drug",
+	max = 3,
+	salary = 15,
+	admin = 0,
+	vote = false,
+	hasLicense = false
+})
+
+TEAM_GANG = DarkRP.createJob("Gangster", {
+    color = Color(75, 75, 75, 255),
+    model = {
+        'models/smalls_civilians/pack1/hoodie_male_01_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_02_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_03_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_04_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_05_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_07_f_npc.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_09_f_npc.mdl',
+    },
+    description = [[The lowest person of crime.
+        A gangster generally works for the Mobboss who runs the crime family.
+        The Mob boss sets your agenda and you follow it or you might be punished.]],
+    weapons = {},
+    command = "gangster",
+    max = 3,
+    salary = GAMEMODE.Config.normalsalary,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Gangsters",
+})
+
+TEAM_MOB = DarkRP.createJob("Mob boss", {
+    color = Color(25, 25, 25, 255),
+    model = "models/player/gman_high.mdl",
+    description = [[The Mob boss is the boss of the criminals in the city.
+        With their power they coordinate the gangsters and form an efficient crime organization.
+        They have the ability to break into houses by using a lockpick.
+        The Mob boss posesses the ability to unarrest you.]],
+    weapons = {"lockpick", "unarrest_stick"},
+    command = "mobboss",
+    max = 1,
+    salary = GAMEMODE.Config.normalsalary * 1.34,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Gangsters",
+})
