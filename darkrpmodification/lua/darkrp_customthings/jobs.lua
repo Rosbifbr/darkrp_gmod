@@ -19,10 +19,6 @@ Add your custom jobs under the following line:
 
 
 --[[---------------------------------------------------------------------------
-Define which team joining players spawn into and what team you change to if demoted
----------------------------------------------------------------------------]]
-GAMEMODE.DefaultTeam = TEAM_CITIZEN
---[[---------------------------------------------------------------------------
 Define which teams belong to civil protection
 Civil protection can set warrants, make people wanted and do some other police related things
 ---------------------------------------------------------------------------]]
@@ -202,3 +198,9 @@ TEAM_MOB = DarkRP.createJob("Mob boss", {
     hasLicense = false,
     category = "Gangsters",
 })
+
+--[[---------------------------------------------------------------------------
+Define which team joining players spawn into and what team you change to if demoted
+---------------------------------------------------------------------------]]
+GAMEMODE.DefaultTeam = TEAM_CITIZEN
+
