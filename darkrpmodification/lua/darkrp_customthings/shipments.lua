@@ -828,3 +828,67 @@ for _, shipment in ipairs(smgsShipments) do
         category = shipment.category,
     })
 end
+
+--Add missing categories:
+DarkRP.createCategory{
+    name = "Rifles",
+    categorises = "shipments",
+    startExpanded = true,
+    color = Color(255, 0, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 1,
+}
+
+DarkRP.createCategory{
+    name = "LMG",
+    categorises = "shipments",
+    startExpanded = true,
+    color = Color(255, 0, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 2,
+}
+
+DarkRP.createCategory{
+    name = "Marksman",
+    categorises = "shipments",
+    startExpanded = true,
+    color = Color(255, 0, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 3,
+}
+
+DarkRP.createCategory{
+    name = "Handguns",
+    categorises = "shipments",
+    startExpanded = true,
+    color = Color(255, 0, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 4,
+}
+
+DarkRP.createCategory{
+    name = "Shotguns",
+    categorises = "shipments",
+    startExpanded = true,
+    color = Color(255, 0, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 5,
+}
+
+DarkRP.createCategory{
+    name = "Snipers",
+    categorises = "shipments",
+    startExpanded = true,
+    color = Color(255, 0, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 6,
+}
+
+DarkRP.createCategory{
+    name = "SMGs",
+    categorises = "shipments",
+    startExpanded = true,
+    color = Color(255, 0, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 7,
+}
