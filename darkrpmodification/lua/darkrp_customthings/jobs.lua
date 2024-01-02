@@ -168,6 +168,31 @@ TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
 	hasLicense = false
 })
 
+TEAM_TERROR = DarkRP.createJob("Terrorist", {
+    color = Color(75, 75, 75, 255),
+    model = {
+        'models/smalls_civilians/pack1/hoodie_male_01_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_02_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_03_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_04_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_05_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_07_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_09_pm.mdl',
+    },
+    description = [[You are a muslim terrorist. Do whatever possible to cause mayhem and havoc to fuck your 72 virgins. RDM is allowed in this role, but do not overdo.]],
+    weapons = {"mg_m1911"},
+    ammo = {
+         ["pistol"] = 60,
+    },
+    command = "gangster",
+    max = 1,
+    salary = GAMEMODE.Config.normalsalary,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Gangsters",
+})
+
 TEAM_GANG = DarkRP.createJob("Gangster", {
     color = Color(75, 75, 75, 255),
     model = {

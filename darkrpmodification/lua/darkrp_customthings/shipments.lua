@@ -892,3 +892,37 @@ DarkRP.createCategory{
     canSee = function(ply) return true end,
     sortOrder = 7,
 }
+
+--Other category
+DarkRP.createShipment("Rocket Launcher", {
+    model = "models/props/cs_office/cardboard_box03.mdl",
+    entity = "weapon_rpg",
+    price = 500,
+    amount = 10,
+    separate = false,
+    pricesep = 6000,
+    noship = true,
+    allowed = {TEAM_MAYOR}
+})
+
+DarkRP.createShipment("Grenades", {
+    model = "models/props/cs_office/cardboard_box03.mdl",
+    entity = "weapon_frag",
+    price = 500,
+    amount = 10,
+    separate = false,
+    pricesep = 4000,
+    noship = true,
+    allowed = {TEAM_TERROR, TEAM_MAYOR}
+})
+
+DarkRP.createShipment("SLAM", {
+    model = "models/props/cs_office/cardboard_box03.mdl",
+    entity = "weapon_slam",
+    price = 500,
+    amount = 10,
+    separate = false,
+    pricesep = 8000,
+    noship = true,
+    allowed = {TEAM_TERROR, TEAM_MAYOR}
+})

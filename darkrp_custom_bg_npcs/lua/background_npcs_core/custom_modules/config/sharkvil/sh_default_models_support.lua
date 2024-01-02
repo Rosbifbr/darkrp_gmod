@@ -7,6 +7,16 @@ if IsValidConfig('citizen') then
    citizen.random_skin = true
    citizen.random_bodygroups = true
    citizen.default_models = true
+   citizen.weapons = { 
+      'mg_357',
+      'mg_deagle',
+      'mg_p320',
+      'mg_m1911',
+      'mg_m9',
+      'mg_makarov',
+      'mg_glock',
+      'mg_charlie725',
+   }
    citizen.models = {
       'models/smalls_civilians/pack1/hoodie_male_01_f_npc.mdl',
       'models/smalls_civilians/pack1/hoodie_male_02_f_npc.mdl',
@@ -47,23 +57,44 @@ if IsValidConfig('gangster') then
    gangster.random_skin = true
    gangster.random_bodygroups = true
    gangster.default_models = false
+   gangster.weapons = { 
+      'mg_357',
+      'mg_deagle',
+      'mg_p320',
+      'mg_m1911',
+      'mg_m9',
+      'mg_makarov',
+      'mg_glock',
+      'mg_charlie725',
+   }
    gangster.models = {
-      'models/survivors/npc/amy.mdl',
-      'models/survivors/npc/candace.mdl',
-      'models/survivors/npc/carson.mdl',
-      'models/survivors/npc/chris.mdl',
-      'models/survivors/npc/damian.mdl',
-      'models/survivors/npc/gregory.mdl',
-      'models/survivors/npc/isa.mdl',
-      'models/survivors/npc/john.mdl',
-      'models/survivors/npc/lucus.mdl',
-      'models/survivors/npc/lyndsay.mdl',
-      'models/survivors/npc/margaret.mdl',
-      'models/survivors/npc/matt.mdl',
-      'models/survivors/npc/rachel.mdl',
-      'models/survivors/npc/rufus.mdl',
-      'models/survivors/npc/tyler.mdl',
-      'models/survivors/npc/wolfgang.mdl',
+      'models/humans/group02/tale_01.mdl',
+      'models/humans/group02/tale_03.mdl',
+      'models/humans/group02/tale_04.mdl',
+      'models/humans/group02/tale_05.mdl',
+      'models/humans/group02/tale_06.mdl',
+      'models/humans/group02/tale_07.mdl',
+      'models/humans/group02/tale_08.mdl',
+      'models/humans/group02/tale_09.mdl',
+      'models/humans/group02/temale_01.mdl',
+      'models/humans/group02/temale_02.mdl',
+      'models/humans/group02/temale_07.mdl',
+      -- 'models/survivors/npc/amy.mdl',
+      -- 'models/survivors/npc/candace.mdl',
+      -- 'models/survivors/npc/carson.mdl',
+      -- 'models/survivors/npc/chris.mdl',
+      -- 'models/survivors/npc/damian.mdl',
+      -- 'models/survivors/npc/gregory.mdl',
+      -- 'models/survivors/npc/isa.mdl',
+      -- 'models/survivors/npc/john.mdl',
+      -- 'models/survivors/npc/lucus.mdl',
+      -- 'models/survivors/npc/lyndsay.mdl',
+      -- 'models/survivors/npc/margaret.mdl',
+      -- 'models/survivors/npc/matt.mdl',
+      -- 'models/survivors/npc/rachel.mdl',
+      -- 'models/survivors/npc/rufus.mdl',
+      -- 'models/survivors/npc/tyler.mdl',
+      -- 'models/survivors/npc/wolfgang.mdl',
    }
 end
 
@@ -72,6 +103,7 @@ if IsValidConfig('civil_defense') then
    civil_defense.random_skin = true
    civil_defense.random_bodygroups = true
    civil_defense.default_models = false
+   civil_defense.weapons = {'mg_uzulu', 'mg_makarov'}
    civil_defense.models = {
       'models/player/kerry/policeru_01.mdl',
       'models/player/kerry/policeru_02.mdl',
@@ -86,6 +118,7 @@ if IsValidConfig('special_forces') then
    special_forces.random_skin = true
    special_forces.random_bodygroups = true
    special_forces.default_models = false
+   special_forces.weapons = {'mg_akilo47', 'mg_makarov'}
    special_forces.models = {
       'models/player/kerry/policeru_01_patrol.mdl',
       'models/player/kerry/policeru_02_patrol.mdl',
@@ -100,6 +133,7 @@ if IsValidConfig('special_forces_2') then
    special_forces_2.random_skin = true
    special_forces_2.random_bodygroups = true
    special_forces_2.default_models = false
+   special_forces_2.weapons = {'mg_g3a3', 'mg_makarov'}
    special_forces_2.models = {
       'models/player/kerry/policeru_01_omon.mdl',
       'models/player/kerry/policeru_02_omon.mdl',
