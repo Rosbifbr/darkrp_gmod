@@ -31,7 +31,7 @@ DarkRP.disabledDefaults["modules"] = {
     ["f4menu"]           = false,
     ["hitmenu"]          = false,
     ["hud"]              = false,
-    ["hungermod"]        = true,
+    ["hungermod"]        = false,
     ["playerscale"]      = false,
     ["sleep"]            = false,
     ["fadmin"]           = false,
@@ -79,7 +79,7 @@ DarkRP.disabledDefaults["shipments"] = {
 Entities
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["entities"] = {
-    ["Drug lab"]      = false,
+    ["Drug lab"]      = true,
     ["Gun lab"]       = false,
     ["Money printer"] = false,
     ["Microwave"]     = false, --Hungermod only

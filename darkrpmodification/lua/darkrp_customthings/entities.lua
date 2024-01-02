@@ -18,7 +18,7 @@ Add entities under the following line:
 ---------------------------------------------------------------------------]]
 
 
-[[--
+--[[
     TODO: Cars
     lvs_wheeldrive_montreal
     lvs_wheeldrive_audiurquattro
@@ -53,6 +53,7 @@ DarkRP.createEntity("Montreal", {
     price = 15000,
     max = 2,
     cmd = "buymontreal",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Audi Quattro", {
@@ -61,6 +62,7 @@ DarkRP.createEntity("Audi Quattro", {
     price = 20000,
     max = 2,
     cmd = "buyaudiquattro",
+    category = "Cars",
 })
 
 DarkRP.createEntity("BMW E34", {
@@ -69,6 +71,7 @@ DarkRP.createEntity("BMW E34", {
     price = 18000,
     max = 2,
     cmd = "buybmwe34",
+    category = "Cars",
 })
 
 DarkRP.createEntity("BMW E9", {
@@ -77,6 +80,7 @@ DarkRP.createEntity("BMW E9", {
     price = 22000,
     max = 2,
     cmd = "buybmwe9",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Highwayman", {
@@ -85,6 +89,7 @@ DarkRP.createEntity("Highwayman", {
     price = 16000,
     max = 2,
     cmd = "buyhighwayman",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Charger", {
@@ -93,6 +98,7 @@ DarkRP.createEntity("Charger", {
     price = 24000,
     max = 2,
     cmd = "buycharger",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Ferrari 365", {
@@ -101,6 +107,7 @@ DarkRP.createEntity("Ferrari 365", {
     price = 35000,
     max = 2,
     cmd = "buyferrari365",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Honda City", {
@@ -109,6 +116,7 @@ DarkRP.createEntity("Honda City", {
     price = 10000,
     max = 2,
     cmd = "buycitycar",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Acura Integra DC2", {
@@ -117,6 +125,7 @@ DarkRP.createEntity("Acura Integra DC2", {
     price = 15000,
     max = 2,
     cmd = "buyintegradc2",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Lada 2108", {
@@ -125,6 +134,7 @@ DarkRP.createEntity("Lada 2108", {
     price = 8000,
     max = 2,
     cmd = "buylada2108",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Mazda Miata", {
@@ -133,6 +143,7 @@ DarkRP.createEntity("Mazda Miata", {
     price = 14000,
     max = 2,
     cmd = "buymiata",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Mazda RX7", {
@@ -141,6 +152,7 @@ DarkRP.createEntity("Mazda RX7", {
     price = 20000,
     max = 2,
     cmd = "buyrx7",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Mercedes W123", {
@@ -149,6 +161,7 @@ DarkRP.createEntity("Mercedes W123", {
     price = 12000,
     max = 2,
     cmd = "buyw123",
+    category = "Cars",
 })
 
 DarkRP.createEntity("MGB GT", {
@@ -157,6 +170,7 @@ DarkRP.createEntity("MGB GT", {
     price = 15000,
     max = 2,
     cmd = "buymgbgt",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Nissan Bluebird", {
@@ -165,6 +179,7 @@ DarkRP.createEntity("Nissan Bluebird", {
     price = 10000,
     max = 2,
     cmd = "buynissanbluebird",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Nissan GTR R34", {
@@ -173,6 +188,7 @@ DarkRP.createEntity("Nissan GTR R34", {
     price = 30000,
     max = 2,
     cmd = "buynissangtrr34",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Peugeot 106", {
@@ -181,6 +197,7 @@ DarkRP.createEntity("Peugeot 106", {
     price = 9000,
     max = 2,
     cmd = "buypeugeot106",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Peugeot 106 S16", {
@@ -189,6 +206,7 @@ DarkRP.createEntity("Peugeot 106 S16", {
     price = 11000,
     max = 2,
     cmd = "buypeugeot106s16",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Porsche 930 Cabriolet", {
@@ -197,6 +215,7 @@ DarkRP.createEntity("Porsche 930 Cabriolet", {
     price = 45000,
     max = 2,
     cmd = "buyporsche930cab",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Porsche 930 Coupe", {
@@ -205,6 +224,7 @@ DarkRP.createEntity("Porsche 930 Coupe", {
     price = 47000,
     max = 2,
     cmd = "buyporsche930coup",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Porsche 930 Targa", {
@@ -213,6 +233,7 @@ DarkRP.createEntity("Porsche 930 Targa", {
     price = 46000,
     max = 2,
     cmd = "buyporsche930targa",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Buick Regal", {
@@ -221,14 +242,16 @@ DarkRP.createEntity("Buick Regal", {
     price = 13000,
     max = 2,
     cmd = "buybuickregal",
+    category = "Cars",
 })
 
-DarkRP.createEntity("Supervan", {
+DarkRP.createEntity("Reliant Supervan", {
     ent = "lvs_wheeldrive_supervan",
     model = "models/props_c17/consolebox01a.mdl",
     price = 10000,
     max = 2,
     cmd = "buysupervan",
+    category = "Cars",
 })
 
 DarkRP.createEntity("Toyota Supra", {
@@ -237,4 +260,158 @@ DarkRP.createEntity("Toyota Supra", {
     price = 40000,
     max = 2,
     cmd = "buytoyotasupra",
+    category = "Cars",
 })
+
+-- AIRCRAFT
+--[[
+    wac_hc_uh1d
+    wac_hc_mi17
+    wac_hc_206b
+    wac_hc_206b_amphib
+    wac_pl_ultralight
+    wac_pl_t45
+    wac_hc_r22
+    wac_pl_bd5j
+    wac_hc_blackhawk_uh60
+    wac_pl_c172
+    wac_hc_littlebird_mh6
+    wac_hc_littlebird_h500
+]]
+
+DarkRP.createEntity("UH-1D", {
+    ent = "wac_hc_uh1d",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 100000,
+    max = 2,
+    cmd = "buyuh1d",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("Mi-17", {
+    ent = "wac_hc_mi17",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 150000,
+    max = 2,
+    cmd = "buymi17",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("Bell 206B", {
+    ent = "wac_hc_206b",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 100000,
+    max = 2,
+    cmd = "buybell206b",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("Bell 206B Amphibious", {
+    ent = "wac_hc_206b_amphib",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 120000,
+    max = 2,
+    cmd = "buybell206bamphib",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("Ultra Light", {
+    ent = "wac_pl_ultralight",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 20000,
+    max = 2,
+    cmd = "buyultralight",
+    category = "Aircraft",
+})
+    
+DarkRP.createEntity("T-45 Goshawk", {
+    ent = "wac_pl_t45",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 100000,
+    max = 2,
+    cmd = "buyt45",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("Robinson R22", {
+    ent = "wac_hc_r22",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 50000,
+    max = 2,
+    cmd = "buyr22",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("BD-5J", {
+    ent = "wac_pl_bd5j",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 50000,
+    max = 2,
+    cmd = "buybd5j",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("UH-60 Blackhawk", {
+    ent = "wac_hc_blackhawk_uh60",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 200000,
+    max = 2,
+    cmd = "buyuh60",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("MH-6 Littlebird", {
+    ent = "wac_hc_littlebird_mh6",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 100000,
+    max = 2,
+    cmd = "buymh6",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("H-500 Littlebird", {
+    ent = "wac_hc_littlebird_h500",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 100000,
+    max = 2,
+    cmd = "buyh500",
+    category = "Aircraft",
+})
+
+DarkRP.createEntity("Cessna 172", {
+    ent = "wac_pl_c172",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 50000,
+    max = 2,
+    cmd = "buycessna172",
+    category = "Aircraft",
+})
+
+-- Misc
+DarkRP.createEntity("Drug Lab", {
+    ent = "drug_lab",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 5000,
+    allowed = {TEAM_DRUG},
+    max = 3,
+    cmd = "buydruglab",
+})
+
+--Categories
+DarkRP.createCategory{
+    name = "Cars",
+    categorises = "entities",
+    startExpanded = true,
+    color = Color(0, 107, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 100,
+}
+
+DarkRP.createCategory{
+    name = "Aircraft",
+    categorises = "entities",
+    startExpanded = true,
+    color = Color(0, 107, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 101,
+}

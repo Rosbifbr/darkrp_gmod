@@ -18,7 +18,7 @@ https://darkrp.miraheze.org/wiki/DarkRP:CustomShipmentFields
 Add shipments and guns under the following line:
 ---------------------------------------------------------------------------]]
 
-[[--
+--[[
 Shipments to create:
 --Rifles
 mg_akilo47
@@ -94,7 +94,7 @@ mg_uzulu
 -- Define the shipments
 local rifleShipments = {
     {
-        model = "models/props/cs_office/cardboard_box03.mdl",
+        name = "AK-47",
         entity = "mg_akilo47",
         price = 20000,
         amount = 4,
@@ -134,7 +134,7 @@ local rifleShipments = {
         separate = true,
         pricesep = 9000,
         noship = false,
-        allowed = {TEAM_GUN},
+        allowed = {TEAM_GUN, TEAM_MOB},
         category = "Rifles",
     },
     {
@@ -381,7 +381,7 @@ local marksmanShipments = {
         separate = true,
         pricesep = 6500,
         noship = false,
-        allowed = {TEAM_MARKSMAN},
+        --allowed = {TEAM_GUN},
         category = "Marksman",
     },
     {
@@ -392,7 +392,7 @@ local marksmanShipments = {
         separate = true,
         pricesep = 8000,
         noship = false,
-        allowed = {TEAM_MARKSMAN},
+        allowed = {TEAM_GUN},
         category = "Marksman",
     },
     {
@@ -403,7 +403,7 @@ local marksmanShipments = {
         separate = true,
         pricesep = 9000,
         noship = false,
-        allowed = {TEAM_MARKSMAN},
+        allowed = {TEAM_GUN},
         category = "Marksman",
     },
     {
@@ -414,7 +414,7 @@ local marksmanShipments = {
         separate = true,
         pricesep = 7000,
         noship = false,
-        allowed = {TEAM_MARKSMAN},
+        allowed = {TEAM_GUN},
         category = "Marksman",
     },
     {
@@ -425,7 +425,7 @@ local marksmanShipments = {
         separate = true,
         pricesep = 7500,
         noship = false,
-        allowed = {TEAM_MARKSMAN},
+        allowed = {TEAM_GUN},
         category = "Marksman",
     },
     {
@@ -436,7 +436,7 @@ local marksmanShipments = {
         separate = true,
         pricesep = 8500,
         noship = false,
-        allowed = {TEAM_MARKSMAN},
+        allowed = {TEAM_GUN},
         category = "Marksman",
     },
 }
@@ -499,7 +499,7 @@ local handgunsShipments = {
         separate = true,
         pricesep = 3500,
         noship = false,
-        allowed = {TEAM_GUN},
+        allowed = {TEAM_GUN, TEAM_MOB},
         category = "Handguns",
     },
     {
@@ -521,7 +521,7 @@ local handgunsShipments = {
         separate = true,
         pricesep = 2500,
         noship = false,
-        allowed = {TEAM_GUN},
+        allowed = {TEAM_GUN, TEAM_MOB},
         category = "Handguns",
     },
     {
@@ -809,7 +809,7 @@ local smgsShipments = {
         separate = true,
         pricesep = 7300,
         noship = false,
-        allowed = {TEAM_GUN},
+        allowed = {TEAM_GUN, TEAM_MOB},
         category = "SMGs",
     },
 }

@@ -35,6 +35,17 @@ DarkRP.addHitmanTeam(TEAM_MOB)
 TEAM_CITIZEN = DarkRP.createJob("Civilian", {
     color = Color(0, 255, 0, 255),
     model = {
+        'models/humans/group02/tale_01.mdl',
+        'models/humans/group02/tale_03.mdl',
+        'models/humans/group02/tale_04.mdl',
+        'models/humans/group02/tale_05.mdl',
+        'models/humans/group02/tale_06.mdl',
+        'models/humans/group02/tale_07.mdl',
+        'models/humans/group02/tale_08.mdl',
+        'models/humans/group02/tale_09.mdl',
+        'models/humans/group02/temale_01.mdl',
+        'models/humans/group02/temale_02.mdl',
+        'models/humans/group02/temale_07.mdl',
         'models/smalls_civilians/pack1/hoodie_male_09_pm.mdl', 
         'models/smalls_civilians/pack1/hoodie_male_01_pm.mdl',
         'models/smalls_civilians/pack1/hoodie_male_02_pm.mdl',
@@ -56,17 +67,6 @@ TEAM_CITIZEN = DarkRP.createJob("Civilian", {
         'models/smalls_civilians/pack1/zipper_female_04_pm.mdl',
         'models/smalls_civilians/pack1/zipper_female_06_pm.mdl',
         'models/smalls_civilians/pack1/zipper_female_07_pm.mdl',
-        'models/humans/group02/tale_01.mdl',
-        'models/humans/group02/tale_03.mdl',
-        'models/humans/group02/tale_04.mdl',
-        'models/humans/group02/tale_05.mdl',
-        'models/humans/group02/tale_06.mdl',
-        'models/humans/group02/tale_07.mdl',
-        'models/humans/group02/tale_08.mdl',
-        'models/humans/group02/tale_09.mdl',
-        'models/humans/group02/temale_01.mdl',
-        'models/humans/group02/temale_02.mdl',
-        'models/humans/group02/temale_07.mdl',
      },
     description = [[You are simply a regular nigga]],
     weapons = {},
@@ -99,7 +99,7 @@ TEAM_POLICE = DarkRP.createJob("Militia", {
         The Battering Ram can break down the door of a criminal, with a warrant for their arrest.
         The Battering Ram can also unfreeze frozen props (if enabled).
         Type /wanted <name> to alert the public to the presence of a criminal.]],
-    weapons = {"arrest_stick", "unarrest_stick", "mg_m1911", "stunstick", "door_ram", "weaponchecker"},
+    weapons = {"arrest_stick", "unarrest_stick", "mg_makarov", "mg_uzulu", "stunstick", "door_ram", "weaponchecker"},
     command = "cp",
     max = 4,
     salary = GAMEMODE.Config.normalsalary * 1.45,
@@ -108,6 +108,7 @@ TEAM_POLICE = DarkRP.createJob("Militia", {
     hasLicense = true,
     ammo = {
         ["pistol"] = 60,
+        ["smg1"] = 80,
     },
     category = "Civil Protection",
 })
@@ -128,7 +129,7 @@ TEAM_CHIEF = DarkRP.createJob("Sheriff", {
         The Battering Ram can break down the door of a criminal, with a warrant for their arrest.
         Type /wanted <name> to alert the public to the presence of a criminal.
         Type /jailpos to set the Jail Position]],
-    weapons = {"arrest_stick", "unarrest_stick", "weapon_deagle2", "stunstick", "door_ram", "weaponchecker"}, --TODO:
+    weapons = {"arrest_stick", "unarrest_stick", "mg_makarov", "mg_akilo47", "stunstick", "door_ram", "weaponchecker"}, --TODO:
     command = "chief",
     max = 1,
     salary = GAMEMODE.Config.normalsalary * 1.67,
@@ -139,6 +140,7 @@ TEAM_CHIEF = DarkRP.createJob("Sheriff", {
     NeedToChangeFrom = TEAM_POLICE,
     ammo = {
         ["pistol"] = 60,
+        ["ar2"] = 90,
     },
     category = "Civil Protection",
 })
@@ -147,8 +149,16 @@ TEAM_CHIEF = DarkRP.createJob("Sheriff", {
 
 TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
 	color = Color(80, 45, 0, 255),
-	model = "models/Eli.mdl",
-	description = [[You're a drug dealiner]],
+	model = {
+        'models/smalls_civilians/pack1/hoodie_male_01_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_02_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_03_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_04_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_05_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_07_pm.mdl',
+        'models/smalls_civilians/pack1/hoodie_male_09_pm.mdl',
+    },
+	description = [[You're a drug dealer]],
 	weapons = {},
 	command = "drug",
 	max = 3,
@@ -172,7 +182,10 @@ TEAM_GANG = DarkRP.createJob("Gangster", {
     description = [[The lowest person of crime.
         A gangster generally works for the Mobboss who runs the crime family.
         The Mob boss sets your agenda and you follow it or you might be punished.]],
-    weapons = {},
+    -- weapons = {"mg_m1911"},
+    -- ammo = {
+    --     ["pistol"] = 60,
+    -- },
     command = "gangster",
     max = 3,
     salary = GAMEMODE.Config.normalsalary,
@@ -189,7 +202,10 @@ TEAM_MOB = DarkRP.createJob("Mob boss", {
         With their power they coordinate the gangsters and form an efficient crime organization.
         They have the ability to break into houses by using a lockpick.
         The Mob boss posesses the ability to unarrest you.]],
-    weapons = {"lockpick", "unarrest_stick"},
+    weapons = {"lockpick", "unarrest_stick", "mg_357"},
+    ammo = {
+        ["357"] = 60,
+    },
     command = "mobboss",
     max = 1,
     salary = GAMEMODE.Config.normalsalary * 1.34,
