@@ -57,6 +57,7 @@ if IsValidConfig('gangster') then
    gangster.random_skin = true
    gangster.random_bodygroups = true
    gangster.default_models = false
+   gangster.weapon_skill = WEAPON_PROFICIENCY_POOR,
    gangster.weapons = { 
       'mg_357',
       'mg_deagle',
@@ -98,18 +99,18 @@ if IsValidConfig('gangster') then
    }
 end
 
-if IsValidConfig('civil_defense') then
-   local civil_defense = bgNPC.cfg.npcs_template['civil_defense']
-   civil_defense.random_skin = true
-   civil_defense.random_bodygroups = true
-   civil_defense.default_models = false
-   civil_defense.weapons = {'mg_uzulu', 'mg_makarov'}
-   civil_defense.models = {
-      'models/player/kerry/policeru_01.mdl',
-      'models/player/kerry/policeru_02.mdl',
-      'models/player/kerry/policeru_03.mdl',
-      'models/player/kerry/policeru_04.mdl',
-      'models/player/kerry/policeru_05.mdl',
+if IsValidConfig('police') then
+   local police = bgNPC.cfg.npcs_template['police']
+   police.random_skin = true
+   police.random_bodygroups = true
+   police.default_models = false
+   police.weapons = {'mg_uzulu', 'mg_makarov'}
+   police.weapon_skill = WEAPON_PROFICIENCY_GOOD
+   police.models = {
+      'models/sentry/hkpd/sentryhkpdmale5h.mdl',
+      'models/sentry/hkpd/sentryhkpdmale7h.mdl',
+      -- 'models/sentry/hkpd/sentryhkpdptumale5g.mdl',
+      -- 'models/sentry/hkpd/sentryhkpdptumale7g.mdl',
    }
 end
 
@@ -120,11 +121,7 @@ if IsValidConfig('special_forces') then
    special_forces.default_models = false
    special_forces.weapons = {'mg_akilo47', 'mg_makarov'}
    special_forces.models = {
-      'models/player/kerry/policeru_01_patrol.mdl',
-      'models/player/kerry/policeru_02_patrol.mdl',
-      'models/player/kerry/policeru_03_patrol.mdl',
-      'models/player/kerry/policeru_04_patrol.mdl',
-      'models/player/kerry/policeru_05_patrol.mdl',
+      'models/sentry/hkpd/hkpdptuh.mdl',
    }
 end
 
@@ -135,10 +132,6 @@ if IsValidConfig('special_forces_2') then
    special_forces_2.default_models = false
    special_forces_2.weapons = {'mg_g3a3', 'mg_makarov'}
    special_forces_2.models = {
-      'models/player/kerry/policeru_01_omon.mdl',
-      'models/player/kerry/policeru_02_omon.mdl',
-      'models/player/kerry/policeru_03_omon.mdl',
-      'models/player/kerry/policeru_04_omon.mdl',
-      'models/player/kerry/policeru_05_omon.mdl',
+      'models/sentry/hkpd/hkpdptuh.mdl',
    }
 end

@@ -245,9 +245,9 @@ GM.Config.minlotterycost                = 30
 -- Money packets will get removed if they don't get picked up after a while. Set to 0 to disable.
 GM.Config.moneyRemoveTime               = 600
 -- mprintamount - Value of the money printed by the money printer.
-GM.Config.mprintamount                  = 250
+GM.Config.mprintamount                  = 700
 -- normalsalary - Sets the starting salary for newly joined players.
-GM.Config.normalsalary                  = 45
+GM.Config.normalsalary                  = 400
 -- npckillpay - Sets the money given for each NPC kill.
 GM.Config.npckillpay                    = 10
 -- paydelay - Sets how long it takes before people get salary.
@@ -279,7 +279,7 @@ GM.Config.shipmentspawntime             = 10
 -- startinghealth - the health when you spawn.
 GM.Config.startinghealth                = 100
 -- startingmoney - your wallet when you join for the first time.
-GM.Config.startingmoney                 = 500
+GM.Config.startingmoney                 = 5000
 -- stunstickdamage - amount of damage the stunstick will do to entities.
 -- When between 0 and 1, the damage is relative, where 1 takes the entire health of the entity.
 -- When above 1, the damage is absolute
@@ -303,7 +303,7 @@ GM.Config.falldamageamount              = 10
 -- printeroverheatchance - The likelyhood of a printer overheating. The higher this number, the less likely (minimum 3, default 22).
 GM.Config.printeroverheatchance         = 22
 -- printerreward - Reward for destroying a money printer.
-GM.Config.printerreward                 = 950
+GM.Config.printerreward                 = 2000
 
 --[[---------------------------------------------------------------------------
 Chat distance settings
@@ -330,7 +330,7 @@ GM.Config.lockdownsound = "npc/overwatch/cityvoice/f_confirmcivilstatus_1_spkr.w
 
 -- The skin DarkRP uses. Set to "default" to use the GMod default derma theme.
 GM.Config.DarkRPSkin = "DarkRP"
-GM.Config.currency = "$"
+GM.Config.currency = "R$"
 GM.Config.currencyThousandSeparator = ","
 GM.Config.chatCommandPrefix = "/"
 GM.Config.F1MenuHelpPage = "https://darkrp.miraheze.org/wiki/Main_Page"

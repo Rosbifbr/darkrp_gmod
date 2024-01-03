@@ -92,6 +92,8 @@ mg_uzulu
 --]]
 
 -- Define the shipments
+local price_multiplier = 0.2
+
 local rifleShipments = {
     {
         name = "AK-47",
@@ -254,10 +256,10 @@ for _, shipment in ipairs(rifleShipments) do
     DarkRP.createShipment(shipment.name, {
         model = "models/props/cs_office/cardboard_box03.mdl",
         entity = shipment.entity,
-        price = shipment.price,
+        price = shipment.price * price_multiplier,
         amount = shipment.amount,
         separate = shipment.separate,
-        pricesep = shipment.pricesep,
+        pricesep = shipment.pricesep * price_multiplier,
         noship = shipment.noship,
         allowed = shipment.allowed,
         category = shipment.category,
@@ -361,10 +363,10 @@ for _, shipment in ipairs(lmgShipments) do
     DarkRP.createShipment(shipment.name, {
         model = "models/props/cs_office/cardboard_box03.mdl",
         entity = shipment.entity,
-        price = shipment.price,
+        price = shipment.price * price_multiplier,
         amount = shipment.amount,
         separate = shipment.separate,
-        pricesep = shipment.pricesep,
+        pricesep = shipment.pricesep * price_multiplier,
         noship = shipment.noship,
         allowed = shipment.allowed,
         category = shipment.category,
@@ -381,7 +383,7 @@ local marksmanShipments = {
         separate = true,
         pricesep = 6500,
         noship = false,
-        --allowed = {TEAM_GUN},
+        allowed = {TEAM_GUN},
         category = "Marksman",
     },
     {
@@ -446,10 +448,10 @@ for _, shipment in ipairs(marksmanShipments) do
     DarkRP.createShipment(shipment.name, {
         model = "models/props/cs_office/cardboard_box03.mdl",
         entity = shipment.entity,
-        price = shipment.price,
+        price = shipment.price * price_multiplier,
         amount = shipment.amount,
         separate = shipment.separate,
-        pricesep = shipment.pricesep,
+        pricesep = shipment.pricesep * price_multiplier,
         noship = shipment.noship,
         allowed = shipment.allowed,
         category = shipment.category,
@@ -542,10 +544,10 @@ for _, shipment in ipairs(handgunsShipments) do
     DarkRP.createShipment(shipment.name, {
         model = "models/props/cs_office/cardboard_box03.mdl",
         entity = shipment.entity,
-        price = shipment.price,
+        price = shipment.price * price_multiplier,
         amount = shipment.amount,
         separate = shipment.separate,
-        pricesep = shipment.pricesep,
+        pricesep = shipment.pricesep * price_multiplier,
         noship = shipment.noship,
         allowed = shipment.allowed,
         category = shipment.category,
@@ -627,10 +629,10 @@ for _, shipment in ipairs(shotgunsShipments) do
     DarkRP.createShipment(shipment.name, {
         model = "models/props/cs_office/cardboard_box03.mdl",
         entity = shipment.entity,
-        price = shipment.price,
+        price = shipment.price * price_multiplier,
         amount = shipment.amount,
         separate = shipment.separate,
-        pricesep = shipment.pricesep,
+        pricesep = shipment.pricesep * price_multiplier,
         noship = shipment.noship,
         allowed = shipment.allowed,
         category = shipment.category,
@@ -690,10 +692,10 @@ for _, shipment in ipairs(snipersShipments) do
     DarkRP.createShipment(shipment.name, {
         model = "models/props/cs_office/cardboard_box03.mdl",
         entity = shipment.entity,
-        price = shipment.price,
+        price = shipment.price * price_multiplier,
         amount = shipment.amount,
         separate = shipment.separate,
-        pricesep = shipment.pricesep,
+        pricesep = shipment.pricesep * price_multiplier,
         noship = shipment.noship,
         allowed = shipment.allowed,
         category = shipment.category,
@@ -819,10 +821,10 @@ for _, shipment in ipairs(smgsShipments) do
     DarkRP.createShipment(shipment.name, {
         model = "models/props/cs_office/cardboard_box03.mdl",
         entity = shipment.entity,
-        price = shipment.price,
+        price = shipment.price * price_multiplier,
         amount = shipment.amount,
         separate = shipment.separate,
-        pricesep = shipment.pricesep,
+        pricesep = shipment.pricesep * price_multiplier,
         noship = shipment.noship,
         allowed = shipment.allowed,
         category = shipment.category,
@@ -893,36 +895,48 @@ DarkRP.createCategory{
     sortOrder = 7,
 }
 
+DarkRP.createCategory{
+    name = "Misc",
+    categorises = "shipments",
+    startExpanded = true,
+    color = Color(255, 0, 0, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 1,
+}
+
 --Other category
 DarkRP.createShipment("Rocket Launcher", {
     model = "models/props/cs_office/cardboard_box03.mdl",
     entity = "weapon_rpg",
-    price = 500,
+    price = 6000 * price_multiplier,
     amount = 10,
-    separate = false,
-    pricesep = 6000,
+    category = "Misc",
+    separate = true,
+    pricesep = 6000 * price_multiplier,
     noship = true,
-    allowed = {TEAM_MAYOR}
+    allowed = {TEAM_MAYOR, TEAM_CHIEF}
 })
 
 DarkRP.createShipment("Grenades", {
     model = "models/props/cs_office/cardboard_box03.mdl",
     entity = "weapon_frag",
-    price = 500,
+    price = 4000 * price_multiplier,
     amount = 10,
-    separate = false,
-    pricesep = 4000,
+    category = "Misc",
+    separate = true,
+    pricesep = 4000 * price_multiplier,
     noship = true,
-    allowed = {TEAM_TERROR, TEAM_MAYOR}
+    allowed = {TEAM_TERROR, TEAM_MAYOR, TEAM_CHIEF, TEAM_MOB}
 })
 
 DarkRP.createShipment("SLAM", {
     model = "models/props/cs_office/cardboard_box03.mdl",
     entity = "weapon_slam",
-    price = 500,
+    price = 8000 * price_multiplier,
     amount = 10,
-    separate = false,
-    pricesep = 8000,
+    separate = true,
+    category = "Misc",
+    pricesep = 8000 * price_multiplier,
     noship = true,
-    allowed = {TEAM_TERROR, TEAM_MAYOR}
+    allowed = {TEAM_TERROR, TEAM_MAYOR, TEAM_CHIEF, TEAM_MOB}
 })

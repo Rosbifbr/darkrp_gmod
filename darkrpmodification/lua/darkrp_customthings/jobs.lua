@@ -35,17 +35,6 @@ DarkRP.addHitmanTeam(TEAM_MOB)
 TEAM_CITIZEN = DarkRP.createJob("Civilian", {
     color = Color(0, 255, 0, 255),
     model = {
-        'models/humans/group02/tale_01.mdl',
-        'models/humans/group02/tale_03.mdl',
-        'models/humans/group02/tale_04.mdl',
-        'models/humans/group02/tale_05.mdl',
-        'models/humans/group02/tale_06.mdl',
-        'models/humans/group02/tale_07.mdl',
-        'models/humans/group02/tale_08.mdl',
-        'models/humans/group02/tale_09.mdl',
-        'models/humans/group02/temale_01.mdl',
-        'models/humans/group02/temale_02.mdl',
-        'models/humans/group02/temale_07.mdl',
         'models/smalls_civilians/pack1/hoodie_male_09_pm.mdl', 
         'models/smalls_civilians/pack1/hoodie_male_01_pm.mdl',
         'models/smalls_civilians/pack1/hoodie_male_02_pm.mdl',
@@ -72,25 +61,19 @@ TEAM_CITIZEN = DarkRP.createJob("Civilian", {
     weapons = {},
     command = "citizen",
     max = 0,
-    salary = 45,
+    salary = GAMEMODE.Config.normalsalary,
     admin = 0,
     vote = false,
     hasLicense = false,
 })
 
-TEAM_POLICE = DarkRP.createJob("Militia", {
+TEAM_POLICE = DarkRP.createJob("Police", {
     color = Color(25, 25, 170, 255),
     model = {
-        'models/player/kerry/policeru_01.mdl',
-        'models/player/kerry/policeru_02.mdl',
-        'models/player/kerry/policeru_03.mdl',
-        'models/player/kerry/policeru_04.mdl',
-        'models/player/kerry/policeru_05.mdl',
-        'models/player/kerry/policeru_01_patrol.mdl',
-        'models/player/kerry/policeru_02_patrol.mdl',
-        'models/player/kerry/policeru_03_patrol.mdl',
-        'models/player/kerry/policeru_04_patrol.mdl',
-        'models/player/kerry/policeru_05_patrol.mdl',
+        'models/sentry/hkpd/sentryhkpdmale5pm.mdl',
+        'models/sentry/hkpd/sentryhkpdmale7pm.mdl',
+        --'models/sentry/hkpd/sentryhkpdptumale5pm.mdl',
+        --'models/sentry/hkpd/sentryhkpdptumale7pm.mdl',
     },
     description = [[The protector of every citizen that lives in the city.
         You have the power to arrest criminals and protect innocents.
@@ -116,11 +99,7 @@ TEAM_POLICE = DarkRP.createJob("Militia", {
 TEAM_CHIEF = DarkRP.createJob("Sheriff", {
     color = Color(20, 20, 255, 255),
     model = {
-        'models/player/kerry/policeru_01_omon.mdl',
-        'models/player/kerry/policeru_02_omon.mdl',
-        'models/player/kerry/policeru_03_omon.mdl',
-        'models/player/kerry/policeru_04_omon.mdl',
-        'models/player/kerry/policeru_05_omon.mdl',
+        'models/sentry/hkpd/hkpdptupm.mdl',
     },
     description = [[The Chief is the leader of the Civil Protection unit.
         Coordinate the police force to enforce law in the city.
@@ -147,26 +126,26 @@ TEAM_CHIEF = DarkRP.createJob("Sheriff", {
 
 --CRIME
 
-TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
-	color = Color(80, 45, 0, 255),
-	model = {
-        'models/smalls_civilians/pack1/hoodie_male_01_pm.mdl',
-        'models/smalls_civilians/pack1/hoodie_male_02_pm.mdl',
-        'models/smalls_civilians/pack1/hoodie_male_03_pm.mdl',
-        'models/smalls_civilians/pack1/hoodie_male_04_pm.mdl',
-        'models/smalls_civilians/pack1/hoodie_male_05_pm.mdl',
-        'models/smalls_civilians/pack1/hoodie_male_07_pm.mdl',
-        'models/smalls_civilians/pack1/hoodie_male_09_pm.mdl',
-    },
-	description = [[You're a drug dealer]],
-	weapons = {},
-	command = "drug",
-	max = 3,
-	salary = 15,
-	admin = 0,
-	vote = false,
-	hasLicense = false
-})
+-- TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
+-- 	color = Color(80, 45, 0, 255),
+-- 	model = {
+--         'models/smalls_civilians/pack1/hoodie_male_01_pm.mdl',
+--         'models/smalls_civilians/pack1/hoodie_male_02_pm.mdl',
+--         'models/smalls_civilians/pack1/hoodie_male_03_pm.mdl',
+--         'models/smalls_civilians/pack1/hoodie_male_04_pm.mdl',
+--         'models/smalls_civilians/pack1/hoodie_male_05_pm.mdl',
+--         'models/smalls_civilians/pack1/hoodie_male_07_pm.mdl',
+--         'models/smalls_civilians/pack1/hoodie_male_09_pm.mdl',
+--     },
+-- 	description = [[You're a drug dealer]],
+-- 	weapons = {},
+-- 	command = "drug",
+-- 	max = 3,
+-- 	salary = 15,
+-- 	admin = 0,
+-- 	vote = false,
+-- 	hasLicense = false
+-- })
 
 TEAM_TERROR = DarkRP.createJob("Terrorist", {
     color = Color(75, 75, 75, 255),
@@ -184,7 +163,7 @@ TEAM_TERROR = DarkRP.createJob("Terrorist", {
     ammo = {
          ["pistol"] = 60,
     },
-    command = "gangster",
+    command = "terrorist",
     max = 1,
     salary = GAMEMODE.Config.normalsalary,
     admin = 0,
@@ -229,7 +208,7 @@ TEAM_MOB = DarkRP.createJob("Mob boss", {
         The Mob boss posesses the ability to unarrest you.]],
     weapons = {"lockpick", "unarrest_stick", "mg_357"},
     ammo = {
-        ["357"] = 60,
+        ["357"] = 24,
     },
     command = "mobboss",
     max = 1,
