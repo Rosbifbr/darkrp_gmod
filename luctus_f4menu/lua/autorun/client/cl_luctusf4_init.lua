@@ -9,7 +9,7 @@ luctusF4.curItem = nil
 --CONFIG START
 
 local extraButtons = {
-    ["Workshop"] = function() gui.OpenURL("https://steamcommunity.com/sharedfiles/") end,
+    --["Workshop"] = function() gui.OpenURL("https://steamcommunity.com/sharedfiles/") end,
 }
 
 local tabButtonHeight = 45

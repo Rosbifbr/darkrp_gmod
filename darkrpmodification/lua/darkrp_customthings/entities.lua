@@ -45,8 +45,39 @@ Add entities under the following line:
     lvs_wheeldrive_supervan
     lvs_wheeldrive_supra
 --]]
+
+--Config
 local price_multiplier = 0.2
+local owner_table = {}
+
+--Custom LVS Hooks
+hook.Add("playerBoughtCustomEntity", "IdentifyBuyerOfEntity", function(ply, entTable, ent, price)
+    --print(ply:Nick() .. " has bought an entity: " .. entTable.name)
+    owner_table[ent] = ply
+end)
+
+--Only owner can drive car
+hook.Add('LVS.CanPlayerDrive', 'Whitelist', function(ply, vehicle)
+    if (owner_table[vehicle] == ply) then
+        return true
+    else
+        --Alert player he cant drive this
+        ply:ChatPrint("You do not own this vehicle!")
+        return false
+    end
+end)
+
 --CARS
+DarkRP.createEntity("Peugeot 106 - Police Issue", {
+    ent = "lvs_wheeldrive_pugo106",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 0,
+    max = 1,
+    allowed = {TEAM_POLICE, TEAM_CHIEF, TEAM_MAYOR},
+    cmd = "buypolicepeugeot106",
+    category = "Cars",
+})
+
 DarkRP.createEntity("Montreal", {
     ent = "lvs_wheeldrive_montreal",
     model = "models/props_c17/consolebox01a.mdl", --Leave default
@@ -263,6 +294,59 @@ DarkRP.createEntity("Toyota Supra", {
     category = "Cars",
 })
 
+--Cars - Repair
+--[[lvs_item_turbo
+gmod_item_vehicle_fphysics_wheel
+lvs_item_compressor
+lvs_item_jerrycan
+lvs_item_jerrycan_diesel
+lvs_vehicle_repair]]
+
+DarkRP.createEntity("Turbo", {
+    ent = "lvs_item_turbo",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 10000,
+    max = 2,
+    cmd = "buyturbo",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Wheel", {
+    ent = "gmod_item_vehicle_fphysics_wheel",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 1000,
+    max = 2,
+    cmd = "buywheel",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Compressor", {
+    ent = "lvs_item_compressor",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 10000,
+    max = 2,
+    cmd = "buycompressor",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Jerrycan", {
+    ent = "lvs_item_jerrycan",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 1000,
+    max = 4,
+    cmd = "buyjerrycan",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Jerrycan Diesel", {
+    ent = "lvs_item_jerrycan_diesel",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 1000,
+    max = 4,
+    cmd = "buyjerrycandiesel",
+    category = "Cars",
+})
+
 -- AIRCRAFT
 --[[
     wac_hc_uh1d
@@ -388,14 +472,14 @@ DarkRP.createEntity("Cessna 172", {
 })
 
 -- Misc
-DarkRP.createEntity("Drug Lab", {
-    ent = "drug_lab",
-    model = "models/props_c17/consolebox01a.mdl",
-    price = price_multiplier * 5000,
-    allowed = {TEAM_DRUG},
-    max = 3,
-    cmd = "buydruglab",
-})
+-- DarkRP.createEntity("Drug Lab", {
+--     ent = "drug_lab",
+--     model = "models/props_c17/consolebox01a.mdl",
+--     price = price_multiplier * 5000,
+--     allowed = {TEAM_DRUG},
+--     max = 3,
+--     cmd = "buydruglab",
+-- })
 
 --Categories
 DarkRP.createCategory{

@@ -57,7 +57,7 @@ if IsValidConfig('gangster') then
    gangster.random_skin = true
    gangster.random_bodygroups = true
    gangster.default_models = false
-   gangster.weapon_skill = WEAPON_PROFICIENCY_POOR,
+   gangster.weapon_skill = WEAPON_PROFICIENCY_POOR
    gangster.weapons = { 
       'mg_357',
       'mg_deagle',
@@ -104,13 +104,12 @@ if IsValidConfig('police') then
    police.random_skin = true
    police.random_bodygroups = true
    police.default_models = false
-   police.weapons = {'mg_uzulu', 'mg_makarov'}
+   police.weapons = {'mg_mpapa5', 'mg_p320'}
    police.weapon_skill = WEAPON_PROFICIENCY_GOOD
+   police.class = 'npc_citizen'
    police.models = {
       'models/sentry/hkpd/sentryhkpdmale5h.mdl',
       'models/sentry/hkpd/sentryhkpdmale7h.mdl',
-      -- 'models/sentry/hkpd/sentryhkpdptumale5g.mdl',
-      -- 'models/sentry/hkpd/sentryhkpdptumale7g.mdl',
    }
 end
 
@@ -119,7 +118,7 @@ if IsValidConfig('special_forces') then
    special_forces.random_skin = true
    special_forces.random_bodygroups = true
    special_forces.default_models = false
-   special_forces.weapons = {'mg_akilo47', 'mg_makarov'}
+   special_forces.weapons = {'mg_sierra552'}
    special_forces.models = {
       'models/sentry/hkpd/hkpdptuh.mdl',
    }
@@ -130,7 +129,7 @@ if IsValidConfig('special_forces_2') then
    special_forces_2.random_skin = true
    special_forces_2.random_bodygroups = true
    special_forces_2.default_models = false
-   special_forces_2.weapons = {'mg_g3a3', 'mg_makarov'}
+   special_forces_2.weapons = {'mg_g3a3'}
    special_forces_2.models = {
       'models/sentry/hkpd/hkpdptuh.mdl',
    }

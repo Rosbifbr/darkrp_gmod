@@ -110,3 +110,29 @@ DarkRP.createAmmoType("ar2", {
     price = 60,
     amountGiven = 30
 })
+
+
+--Heavy shit
+DarkRP.createAmmoType("Grenade", {
+    name = "Grenades",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 800,
+    amountGiven = 4,
+    allowed = {TEAM_TERROR, TEAM_MAYOR, TEAM_CHIEF, TEAM_MOB}
+})
+
+DarkRP.createAmmoType("slam", {
+    name = "SLAM",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 1600,
+    amountGiven = 4,
+    allowed = {TEAM_TERROR, TEAM_MAYOR, TEAM_CHIEF, TEAM_MOB}
+})
+
+DarkRP.createAmmoType("RPG_Round", {
+    name = "RPG Rockets",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 800,
+    amountGiven = 4,
+    allowed = {TEAM_MAYOR, TEAM_CHIEF}
+})
