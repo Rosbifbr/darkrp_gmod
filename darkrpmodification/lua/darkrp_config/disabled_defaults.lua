@@ -31,7 +31,7 @@ DarkRP.disabledDefaults["modules"] = {
     ["f4menu"]           = false,
     ["hitmenu"]          = false,
     ["hud"]              = false,
-    ["hungermod"]        = true,
+    ["hungermod"]        = false,
     ["playerscale"]      = false,
     ["sleep"]            = false,
     ["fadmin"]           = false,
@@ -117,7 +117,7 @@ DarkRP.disabledDefaults["food"] = {
 Door groups
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["doorgroups"] = {
-    ["Cops and Mayor only"] = false,
+    ["Cops and Mayor only"] = true,
     ["Gundealer only"]      = false,
 }
 

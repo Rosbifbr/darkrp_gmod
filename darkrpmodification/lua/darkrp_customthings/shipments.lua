@@ -916,3 +916,29 @@ DarkRP.createShipment("Rocket Launcher", {
     noship = true,
     allowed = {TEAM_MAYOR, TEAM_CHIEF}
 })
+
+DarkRP.createShipment("SLAM", {
+    model = "models/weapons/w_slam.mdl",
+    entity = "weapon_slam",
+    price = 500 * price_multiplier,
+    amount = 1,
+    separate = true,
+    pricesep = 500 * price_multiplier,
+    noship = true,
+    allowed = {TEAM_MAYOR, TEAM_CHIEF, TEAM_TERROR},
+    category = "Misc",
+    -- CustomCheck
+})
+
+DarkRP.createShipment("Frag Grenade", {
+    model = "models/weapons/w_eq_fraggrenade.mdl",
+    entity = "weapon_frag",
+    price = 500 * price_multiplier,
+    amount = 1,
+    separate = true,
+    pricesep = 500 * price_multiplier,
+    noship = true,
+    allowed = {TEAM_MAYOR, TEAM_CHIEF, TEAM_TERROR},
+    category = "Misc",
+    -- CustomCheck
+})
