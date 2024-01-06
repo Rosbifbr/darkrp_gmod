@@ -67,6 +67,34 @@ TEAM_CITIZEN = DarkRP.createJob("Civilian", {
     hasLicense = false,
 })
 
+TEAM_BANKER = DarkRP.createJob("Banker", {
+    color = Color(83, 213, 253),
+    model = "models/player/suits/male_08_open_waistcoat.mdl",
+    description = [[
+        You are responsible for the bank's security
+    ]],
+    weapons = {
+        "mg_romeo870"
+    },
+    command = "banker",
+    max = 1,
+    ammo = {
+        ["buckshot"] = 30,
+    },
+    salary = GAMEMODE.Config.normalsalary * 2,
+    admin = 0,
+    vote = true,
+    hasLicense = true,
+    category = "Bank",
+    canDemote = true,
+    PlayerSpawn = function(ply)
+        ply:SetHealth(100)
+        ply:SetMaxHealth(100)
+        ply:SetArmor(100)
+        ply:SetMaxArmor(100)
+    end,
+})
+
 TEAM_POLICE = DarkRP.createJob("Police", {
     color = Color(25, 25, 170, 255),
     model = {
@@ -94,6 +122,12 @@ TEAM_POLICE = DarkRP.createJob("Police", {
         ["smg1"] = 80,
     },
     category = "Civil Protection",
+    PlayerSpawn = function(ply)
+        ply:SetHealth(100)
+        ply:SetMaxHealth(100)
+        ply:SetArmor(100)
+        ply:SetMaxArmor(100)
+    end,
 })
 
 TEAM_CHIEF = DarkRP.createJob("Sheriff", {
@@ -122,6 +156,12 @@ TEAM_CHIEF = DarkRP.createJob("Sheriff", {
         ["ar2"] = 90,
     },
     category = "Civil Protection",
+    PlayerSpawn = function(ply)
+        ply:SetHealth(100)
+        ply:SetMaxHealth(100)
+        ply:SetArmor(100)
+        ply:SetMaxArmor(100)
+    end,
 })
 
 --CRIME
@@ -201,7 +241,7 @@ TEAM_GANG = DarkRP.createJob("Gangster", {
 
 TEAM_MOB = DarkRP.createJob("Mob boss", {
     color = Color(25, 25, 25, 255),
-    model = "models/player/gman_high.mdl",
+    model = "models/player/suits/male_06_closed_coat_tie.mdl",
     description = [[The Mob boss is the boss of the criminals in the city.
         With their power they coordinate the gangsters and form an efficient crime organization.
         They have the ability to break into houses by using a lockpick.
