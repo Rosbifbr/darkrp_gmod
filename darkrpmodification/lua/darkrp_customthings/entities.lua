@@ -472,6 +472,23 @@ DarkRP.createEntity("Cessna 172", {
 })
 
 -- Misc
+
+DarkRP.createEntity("Vault Security Hacker", {
+    ent = "svault_hacker",
+    cmd = "buyvaulthacker",
+    model = "models/ogl/ogl_securitysystem.mdl",
+    price = 5500,
+    max = 1,
+    allowed = {
+        TEAM_MOB
+    },
+    category = "Other",
+    customCheck = function(ply) 
+        return table.HasValue({TEAM_MOB}, ply:Team()) 
+    end,
+    CustomCheckFailMsg = "Only the Mob Boss can buy this item",
+})
+
 -- DarkRP.createEntity("Drug Lab", {
 --     ent = "drug_lab",
 --     model = "models/props_c17/consolebox01a.mdl",
