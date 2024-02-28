@@ -1,6 +1,7 @@
 # General notes: 
 - Darkrp customthings -> 90% of work will be here
 - Steam collection: add here
+- https://steamcommunity.com/sharedfiles/filedetails/?id=3127034860
 
 # How to install modifications:
 - git clone [repo here]
