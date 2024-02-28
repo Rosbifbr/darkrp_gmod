@@ -78,6 +78,69 @@ DarkRP.createEntity("Peugeot 106 - Police Issue", {
     category = "Cars",
 })
 
+DarkRP.createEntity("Golf GTI", {
+    ent = "lvs_wheeldrive_dcgolfmk1",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 12000,
+    max = 2,
+    cmd = "buygolfgti",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Nissan Silvia", {
+    ent = "lvs_wheeldrive_dc2",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 15000,
+    max = 2,
+    cmd = "buysilvia",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Toyota Corolla", {
+    ent = "lvs_wheeldrive_dc_corollasr5",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 16500,
+    max = 2,
+    cmd = "buycorolla",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Nissan Skyline", {
+    ent = "lvs_wheeldrive_gtr34",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 23000,
+    max = 2,
+    cmd = "buyskyline",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Mazda RX-7 Turbo", {
+    ent = "lvs_wheeldrive_dc_rx7fc_turbo",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 26500,
+    max = 2,
+    cmd = "buyrx7",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Honda Prelude", {
+    ent = "lvs_wheeldrive_dc_prelude4",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 28000,
+    max = 2,
+    cmd = "buyprelude",
+    category = "Cars",
+})
+
+DarkRP.createEntity("Ferrari 360", {
+    ent = "lvs_wheeldrive_ferrari360",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = price_multiplier * 80000,
+    max = 2,
+    cmd = "buyprelude",
+    category = "Cars",
+})
+
 DarkRP.createEntity("Montreal", {
     ent = "lvs_wheeldrive_montreal",
     model = "models/props_c17/consolebox01a.mdl", --Leave default
