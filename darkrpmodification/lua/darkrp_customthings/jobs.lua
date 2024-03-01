@@ -85,7 +85,6 @@ TEAM_BANKER = DarkRP.createJob("Banker", {
     admin = 0,
     vote = true,
     hasLicense = true,
-    category = "Bank",
     canDemote = true,
     PlayerSpawn = function(ply)
         ply:SetHealth(100)
