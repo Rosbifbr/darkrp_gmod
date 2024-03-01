@@ -114,15 +114,6 @@ DarkRP.createEntity("Nissan Skyline", {
     category = "Cars",
 })
 
-DarkRP.createEntity("Mazda RX-7 Turbo", {
-    ent = "lvs_wheeldrive_dc_rx7fc_turbo",
-    model = "models/props_c17/consolebox01a.mdl",
-    price = price_multiplier * 26500,
-    max = 2,
-    cmd = "buyrx7",
-    category = "Cars",
-})
-
 DarkRP.createEntity("Honda Prelude", {
     ent = "lvs_wheeldrive_dc_prelude4",
     model = "models/props_c17/consolebox01a.mdl",
@@ -137,7 +128,7 @@ DarkRP.createEntity("Ferrari 360", {
     model = "models/props_c17/consolebox01a.mdl",
     price = price_multiplier * 80000,
     max = 2,
-    cmd = "buyprelude",
+    cmd = "buyferrari",
     category = "Cars",
 })
 
