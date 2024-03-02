@@ -48,24 +48,6 @@ Add entities under the following line:
 
 --Config
 local price_multiplier = 0.2
-local owner_table = {}
-
---Custom LVS Hooks
-hook.Add("playerBoughtCustomEntity", "IdentifyBuyerOfEntity", function(ply, entTable, ent, price)
-    --print(ply:Nick() .. " has bought an entity: " .. entTable.name)
-    owner_table[ent] = ply
-end)
-
---Only owner can drive car
-hook.Add('LVS.CanPlayerDrive', 'Whitelist', function(ply, vehicle)
-    if (owner_table[vehicle] == ply) then
-        return true
-    else
-        --Alert player he cant drive this
-        ply:ChatPrint("You do not own this vehicle!")
-        return false
-    end
-end)
 
 --CARS
 DarkRP.createEntity("Peugeot 106 - Police Issue", {

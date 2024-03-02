@@ -50,6 +50,10 @@ if IsValidConfig('citizen') then
       'models/humans/group02/temale_02.mdl',
       'models/humans/group02/temale_07.mdl',
    }
+   citizen.at_random = {
+        ['walk'] = 90,
+        ['idle'] = 10,
+    }
 end
 
 if IsValidConfig('gangster') then
