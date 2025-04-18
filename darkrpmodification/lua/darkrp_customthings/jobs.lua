@@ -72,7 +72,7 @@ TEAM_BANKER = DarkRP.createJob("Banker", {
         You are responsible for the bank's security
     ]],
 	weapons = {
-		"arccw_go_870",
+		"arc9_cod2019_sh_model680",
 	},
 	command = "banker",
 	max = 1,
@@ -97,8 +97,6 @@ TEAM_POLICE = DarkRP.createJob("Police", {
 	model = {
 		"models/sentry/hkpd/sentryhkpdmale5pm.mdl",
 		"models/sentry/hkpd/sentryhkpdmale7pm.mdl",
-		--'models/sentry/hkpd/sentryhkpdptumale5pm.mdl',
-		--'models/sentry/hkpd/sentryhkpdptumale7pm.mdl',
 	},
 	description = [[The protector of every citizen that lives in the city.
         You have the power to arrest criminals and protect innocents.
@@ -110,8 +108,8 @@ TEAM_POLICE = DarkRP.createJob("Police", {
 	weapons = {
 		"arrest_stick",
 		"unarrest_stick",
-		"arccw_go_p250",
-		"arccw_go_ump",
+		"arc9_cod2019_pi_m1911",
+		"arc9_cod2019_sm_iso",
 		"stunstick",
 		"door_ram",
 		"weaponchecker",
@@ -151,8 +149,8 @@ TEAM_CHIEF = DarkRP.createJob("Sheriff", {
 	weapons = {
 		"arrest_stick",
 		"unarrest_stick",
-		"arccw_go_p250",
-		"arccw_go_ump",
+		"arc9_cod2019_pi_m1911",
+		"arc9_cod2019_sm_iso",
 		"stunstick",
 		"door_ram",
 		"weaponchecker",
@@ -253,7 +251,11 @@ TEAM_MOB = DarkRP.createJob("Mob boss", {
         With their power they coordinate the gangsters and form an efficient crime organization.
         They have the ability to break into houses by using a lockpick.
         The Mob boss posesses the ability to unarrest you.]],
-	weapons = { "lockpick", "unarrest_stick", "arccw_go_tec9" },
+	weapons = {
+		"lockpick",
+		"unarrest_stick",
+		"arc9_cod2019_sm_cx9",
+	},
 	ammo = {
 		["pistol"] = 90,
 	},

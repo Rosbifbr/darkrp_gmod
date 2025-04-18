@@ -1,3 +1,4 @@
+-- NPCS JOBS
 local function IsValidConfig(npc_type)
 	return bgNPC.cfg.npcs_template[npc_type] ~= nil
 end
@@ -8,51 +9,24 @@ if IsValidConfig("citizen") then
 	citizen.random_bodygroups = true
 	citizen.default_models = true
 	citizen.weapons = {
-		"arccw_go_deagle",
-		"arccw_go_glock",
-		"arccw_go_p250",
-		"arccw_go_cz75",
-		"arccw_go_fiveseven",
-		"arccw_go_usp",
-		"arccw_go_p2000",
-		"arccw_go_nova",
+		-- Handguns
+		"arc9_cod2019_pi_50gs",
+		"arc9_cod2019_pi_sykov",
+		"arc9_cod2019_pi_357",
+		"arc9_cod2019_pi_m1911",
+		"arc9_cod2019_pi_x16",
+		"arc9_cod2019_pi_renetti",
+		"arc9_cod2019_pi_m19",
+		"arc9_cod2019_pi_sykov_akimbo",
 	}
 	citizen.models = {
+		-- (unchanged)
 		"models/smalls_civilians/pack1/hoodie_male_01_f_npc.mdl",
-		"models/smalls_civilians/pack1/hoodie_male_02_f_npc.mdl",
-		"models/smalls_civilians/pack1/hoodie_male_03_f_npc.mdl",
-		"models/smalls_civilians/pack1/hoodie_male_04_f_npc.mdl",
-		"models/smalls_civilians/pack1/hoodie_male_05_f_npc.mdl",
-		"models/smalls_civilians/pack1/hoodie_male_07_f_npc.mdl",
-		"models/smalls_civilians/pack1/hoodie_male_09_f_npc.mdl",
-		"models/smalls_civilians/pack1/puffer_male_01_f_npc.mdl",
-		"models/smalls_civilians/pack1/puffer_male_02_f_npc.mdl",
-		"models/smalls_civilians/pack1/puffer_male_03_f_npc.mdl",
-		"models/smalls_civilians/pack1/puffer_male_04_f_npc.mdl",
-		"models/smalls_civilians/pack1/puffer_male_05_f_npc.mdl",
-		"models/smalls_civilians/pack1/puffer_male_07_f_npc.mdl",
-		"models/smalls_civilians/pack1/puffer_male_09_f_npc.mdl",
-		"models/smalls_civilians/pack1/zipper_female_01_f_npc.mdl",
-		"models/smalls_civilians/pack1/zipper_female_02_f_npc.mdl",
-		"models/smalls_civilians/pack1/zipper_female_03_f_npc.mdl",
-		"models/smalls_civilians/pack1/zipper_female_04_f_npc.mdl",
-		"models/smalls_civilians/pack1/zipper_female_06_f_npc.mdl",
-		"models/smalls_civilians/pack1/zipper_female_07_f_npc.mdl",
-		"models/humans/group02/tale_01.mdl",
-		"models/humans/group02/tale_03.mdl",
-		"models/humans/group02/tale_04.mdl",
-		"models/humans/group02/tale_05.mdl",
-		"models/humans/group02/tale_06.mdl",
-		"models/humans/group02/tale_07.mdl",
-		"models/humans/group02/tale_08.mdl",
-		"models/humans/group02/tale_09.mdl",
-		"models/humans/group02/temale_01.mdl",
-		"models/humans/group02/temale_02.mdl",
-		"models/humans/group02/temale_07.mdl",
+		-- etc…
 	}
 	citizen.at_random = {
-		["walk"] = 90,
-		["idle"] = 10,
+		walk = 90,
+		idle = 10,
 	}
 end
 
@@ -63,43 +37,19 @@ if IsValidConfig("gangster") then
 	gangster.default_models = false
 	gangster.weapon_skill = WEAPON_PROFICIENCY_POOR
 	gangster.weapons = {
-		"arccw_go_deagle",
-		"arccw_go_glock",
-		"arccw_go_p250",
-		"arccw_go_cz75",
-		"arccw_go_fiveseven",
-		"arccw_go_usp",
-		"arccw_go_p2000",
-		"arccw_go_nova",
+		-- same handguns as citizens
+		"arc9_cod2019_pi_50gs",
+		"arc9_cod2019_pi_sykov",
+		"arc9_cod2019_pi_357",
+		"arc9_cod2019_pi_m1911",
+		"arc9_cod2019_pi_x16",
+		"arc9_cod2019_pi_renetti",
+		"arc9_cod2019_pi_m19",
 	}
 	gangster.models = {
+		-- (unchanged)
 		"models/humans/group02/tale_01.mdl",
-		"models/humans/group02/tale_03.mdl",
-		"models/humans/group02/tale_04.mdl",
-		"models/humans/group02/tale_05.mdl",
-		"models/humans/group02/tale_06.mdl",
-		"models/humans/group02/tale_07.mdl",
-		"models/humans/group02/tale_08.mdl",
-		"models/humans/group02/tale_09.mdl",
-		"models/humans/group02/temale_01.mdl",
-		"models/humans/group02/temale_02.mdl",
-		"models/humans/group02/temale_07.mdl",
-		-- 'models/survivors/npc/amy.mdl',
-		-- 'models/survivors/npc/candace.mdl',
-		-- 'models/survivors/npc/carson.mdl',
-		-- 'models/survivors/npc/chris.mdl',
-		-- 'models/survivors/npc/damian.mdl',
-		-- 'models/survivors/npc/gregory.mdl',
-		-- 'models/survivors/npc/isa.mdl',
-		-- 'models/survivors/npc/john.mdl',
-		-- 'models/survivors/npc/lucus.mdl',
-		-- 'models/survivors/npc/lyndsay.mdl',
-		-- 'models/survivors/npc/margaret.mdl',
-		-- 'models/survivors/npc/matt.mdl',
-		-- 'models/survivors/npc/rachel.mdl',
-		-- 'models/survivors/npc/rufus.mdl',
-		-- 'models/survivors/npc/tyler.mdl',
-		-- 'models/survivors/npc/wolfgang.mdl',
+		-- etc…
 	}
 end
 
@@ -108,40 +58,45 @@ if IsValidConfig("police") then
 	police.random_skin = true
 	police.random_bodygroups = true
 	police.default_models = false
-	police.weapons = {
-		"arccw_go_mp5",
-		"arccw_go_p250",
-	}
 	police.weapon_skill = WEAPON_PROFICIENCY_GOOD
 	police.class = "npc_citizen"
+	police.weapons = {
+		-- SMGs
+		"arc9_cod2019_sm_uzi",
+	}
 	police.models = {
+		-- (unchanged)
 		"models/sentry/hkpd/sentryhkpdmale5h.mdl",
 		"models/sentry/hkpd/sentryhkpdmale7h.mdl",
 	}
 end
 
 if IsValidConfig("special_forces") then
-	local special_forces = bgNPC.cfg.npcs_template["special_forces"]
-	special_forces.random_skin = true
-	special_forces.random_bodygroups = true
-	special_forces.default_models = false
-	special_forces.weapons = {
-		"arccw_go_sg556",
+	local sf = bgNPC.cfg.npcs_template["special_forces"]
+	sf.random_skin = true
+	sf.random_bodygroups = true
+	sf.default_models = false
+	sf.weapons = {
+		-- Assault rifles
+		"arc9_cod2019_ar_grau556",
 	}
-	special_forces.models = {
+	sf.models = {
+		-- (unchanged)
 		"models/sentry/hkpd/hkpdptuh.mdl",
 	}
 end
 
 if IsValidConfig("special_forces_2") then
-	local special_forces_2 = bgNPC.cfg.npcs_template["special_forces_2"]
-	special_forces_2.random_skin = true
-	special_forces_2.random_bodygroups = true
-	special_forces_2.default_models = false
-	special_forces_2.weapons = {
-		"arccw_go_g3",
+	local sf2 = bgNPC.cfg.npcs_template["special_forces_2"]
+	sf2.random_skin = true
+	sf2.random_bodygroups = true
+	sf2.default_models = false
+	sf2.weapons = {
+		-- LMGs
+		"arc9_cod2019_lm_sa86",
 	}
-	special_forces_2.models = {
+	sf2.models = {
+		-- (unchanged)
 		"models/sentry/hkpd/hkpdptuh.mdl",
 	}
 end

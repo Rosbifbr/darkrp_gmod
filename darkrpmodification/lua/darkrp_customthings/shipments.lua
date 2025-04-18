@@ -1,659 +1,202 @@
 --[[---------------------------------------------------------------------------
-DarkRP custom shipments and guns
----------------------------------------------------------------------------
-
-This file contains your custom shipments and guns.
-This file should also contain shipments and guns from DarkRP that you edited.
-
-Note: If you want to edit a default DarkRP shipment, first disable it in darkrp_config/disabled_defaults.lua
-    Once you've done that, copy and paste the shipment to this file and edit it.
-
-The default shipments and guns can be found here:
-https://github.com/FPtje/DarkRP/blob/master/gamemode/config/addentities.lua
-
-For examples and explanation please visit this wiki page:
-https://darkrp.miraheze.org/wiki/DarkRP:CustomShipmentFields
-
-
-Add shipments and guns under the following line:
+DarkRP Custom Shipments: COD 2019
+Replaced all ARC CW shipments with COD 2019 counterparts
+Removed ARC CW guns
 ---------------------------------------------------------------------------]]
 
---[[
-arccw_go_r8
-arccw_go_p90
-arccw_go_bizon
-arccw_go_aug
-arccw_go_g3
-arccw_go_melee_knife
-arccw_go_ssg08
-arccw_go_fiveseven
-arccw_go_ump
-arccw_go_cz75
-arccw_go_mp5
-arccw_go_nade_knife
-arccw_go_nade_smoke
-arccw_go_p250
-arccw_go_m9
-arccw_go_sg556
-arccw_go_nade_flash
-arccw_go_usp
-arccw_go_m1014
-arccw_go_awp
-arccw_go_tec9
-arccw_go_negev
-arccw_go_mac10
-arccw_go_nade_frag
-arccw_go_deagle
-arccw_go_nova
-arccw_go_m4
-arccw_go_glock
-arccw_go_taser
-arccw_go_nade_molotov
-arccw_go_ace
-arccw_go_870
-arccw_go_mag7
-arccw_go_mp7
-arccw_go_nade_incendiary
-arccw_go_ak47
-arccw_go_ar15
-arccw_go_famas
-arccw_go_p2000
-arccw_go_scar
-arccw_go_m249para
-arccw_go_mp9
---]]
-
--- Define the shipments
 local price_multiplier = 0.2
 
-local rifleShipments = {
-	{
-		name = "AK-47",
-		entity = "arccw_go_ak47",
-		price = 20000,
-		amount = 4,
-		separate = true,
-		pricesep = 7000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Rifles",
+local shipments = {
+	Rifles = {
+		{ name = "AK-47", entity = "arc9_cod2019_ar_ak47", price = 20000, amount = 4, pricesep = 7000 },
+		{ name = "AN-94", entity = "arc9_cod2019_ar_an94", price = 21000, amount = 3, pricesep = 7500 },
+		{ name = "RAM-7", entity = "arc9_cod2019_ar_ram7", price = 23000, amount = 3, pricesep = 8200 },
+		{ name = "FAL", entity = "arc9_cod2019_ar_fal", price = 24000, amount = 3, pricesep = 8500 },
+		{ name = "Grau 5.56", entity = "arc9_cod2019_ar_grau556", price = 25000, amount = 3, pricesep = 9000 },
+		{ name = "FAMAS", entity = "arc9_cod2019_ar_famas", price = 24000, amount = 3, pricesep = 8500 },
+		{ name = "AS VAL", entity = "arc9_cod2019_ar_asval", price = 26000, amount = 2, pricesep = 9500 },
+		{ name = "SCAR-20", entity = "arc9_cod2019_ar_scar", price = 26000, amount = 2, pricesep = 9500 },
+		{ name = "M13", entity = "arc9_cod2019_ar_m13", price = 20000, amount = 4, pricesep = 7200 },
+		{ name = "M4A1", entity = "arc9_cod2019_ar_m4", price = 23000, amount = 3, pricesep = 8200 },
+		{ name = "CR-56 AMAX", entity = "arc9_cod2019_ar_cr56amax", price = 24000, amount = 3, pricesep = 8500 },
+		{ name = "Kilo 141", entity = "arc9_cod2019_ar_kilo141", price = 25000, amount = 3, pricesep = 9000 },
 	},
-	{
-		name = "G3A3",
-		entity = "arccw_go_g3",
-		price = 23000,
-		amount = 3,
-		separate = true,
-		pricesep = 8200,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Rifles",
+
+	LMG = {
+		{ name = "Minigun", entity = "arc9_cod2019_lm_minigun", price = 32000, amount = 2, pricesep = 12000 },
+		{ name = "MG34", entity = "arc9_cod2019_lm_mg34", price = 30000, amount = 2, pricesep = 11000 },
+		{ name = "PKM", entity = "arc9_cod2019_lm_pkm", price = 31000, amount = 2, pricesep = 11500 },
+		{ name = "Bruen MK9", entity = "arc9_cod2019_lm_bruenmk9", price = 33000, amount = 2, pricesep = 12500 },
+		{ name = "Holger", entity = "arc9_cod2019_lm_holger", price = 34000, amount = 2, pricesep = 13000 },
+		{ name = "SA86", entity = "arc9_cod2019_lm_sa86", price = 30000, amount = 2, pricesep = 11000 },
 	},
-	{
-		name = "SG 556",
-		entity = "arccw_go_sg556",
-		price = 21000,
-		amount = 3,
-		separate = true,
-		pricesep = 7500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Rifles",
+
+	Marksman = {
+		{ name = "M14", entity = "arc9_cod2019_mm_m14", price = 22000, amount = 3, pricesep = 8200 },
+		{ name = "Kar98k", entity = "arc9_cod2019_mm_kar98k", price = 24000, amount = 2, pricesep = 9000 },
+		{ name = "SPR-208", entity = "arc9_cod2019_mm_spr208", price = 23000, amount = 3, pricesep = 8500 },
+		{ name = "SKS", entity = "arc9_cod2019_mm_sks", price = 21000, amount = 3, pricesep = 7500 },
+		{ name = "MK2 Carbine", entity = "arc9_cod2019_mm_mk2", price = 25000, amount = 2, pricesep = 9000 },
+		{ name = "Crossbow", entity = "arc9_cod2019_mm_crossbow", price = 20000, amount = 2, pricesep = 8000 },
+		{ name = "SVD", entity = "arc9_cod2019_sn_svd", price = 26000, amount = 2, pricesep = 9500 },
+		{ name = "Rytec AMR", entity = "arc9_cod2019_sn_rytec", price = 28000, amount = 2, pricesep = 10000 },
+		{ name = "HDR", entity = "arc9_cod2019_sn_hdr", price = 30000, amount = 2, pricesep = 11000 },
+		{ name = "AX-50", entity = "arc9_cod2019_sn_ax50", price = 32000, amount = 1, pricesep = 12000 },
 	},
-	{
-		name = "FAMAS",
-		entity = "arccw_go_famas",
-		price = 24000,
-		amount = 3,
-		separate = true,
-		pricesep = 8500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Rifles",
+
+	Handguns = {
+		allowedTeams = { TEAM_GUN, TEAM_MOB },
+		{ name = ".50 GS", entity = "arc9_cod2019_pi_50gs", price = 10000, amount = 3, pricesep = 4000 },
+		{ name = "Sykov", entity = "arc9_cod2019_pi_sykov", price = 9000, amount = 4, pricesep = 3500 },
+		{ name = ".357", entity = "arc9_cod2019_pi_357", price = 9500, amount = 3, pricesep = 3800 },
+		{ name = ".357 Akimbo", entity = "arc9_cod2019_pi_357_akimbo", price = 19000, amount = 2, pricesep = 7500 },
+		{ name = "M1911", entity = "arc9_cod2019_pi_m1911", price = 9000, amount = 4, pricesep = 3500 },
+		{ name = "M1911 Akimbo", entity = "arc9_cod2019_pi_m1911_akimbo", price = 18000, amount = 2, pricesep = 7000 },
+		{ name = "X16", entity = "arc9_cod2019_pi_x16", price = 9000, amount = 4, pricesep = 3500 },
+		{ name = "X16 Akimbo", entity = "arc9_cod2019_pi_x16_akimbo", price = 18000, amount = 2, pricesep = 7000 },
+		{ name = "Renetti", entity = "arc9_cod2019_pi_renetti", price = 10000, amount = 3, pricesep = 4000 },
+		{ name = "Renetti Akimbo", entity = "arc9_cod2019_pi_renetti_akimbo", price = 20000, amount = 2, pricesep = 8000 },
+		{ name = "M19", entity = "arc9_cod2019_pi_m19", price = 9500, amount = 3, pricesep = 3800 },
+		{ name = "M19 Akimbo", entity = "arc9_cod2019_pi_m19_akimbo", price = 19000, amount = 2, pricesep = 7600 },
+		{ name = "50 GS Akimbo", entity = "arc9_cod2019_pi_50gs_akimbo", price = 20000, amount = 2, pricesep = 8000 },
+		{ name = "Sykov Akimbo", entity = "arc9_cod2019_pi_sykov_akimbo", price = 18000, amount = 2, pricesep = 7200 },
 	},
-	{
-		name = "Galil AR",
-		entity = "arccw_go_galil",
-		price = 25000,
-		amount = 3,
-		separate = true,
-		pricesep = 9000,
-		noship = false,
-		allowed = { TEAM_GUN, TEAM_MOB },
-		category = "Rifles",
+
+	Shotguns = {
+		{ name = "Origin 12", entity = "arc9_cod2019_sh_origin12", price = 20000, amount = 2, pricesep = 7500 },
+		{ name = "Origin 12 (VLK)", entity = "arc9_cod2019_sh_vlk", price = 21000, amount = 3, pricesep = 8000 },
+		{ name = "Model 680", entity = "arc9_cod2019_sh_model680", price = 18000, amount = 3, pricesep = 6500 },
+		{ name = "R90", entity = "arc9_cod2019_sh_r90", price = 16000, amount = 4, pricesep = 6000 },
+		{ name = "Jak-12", entity = "arc9_cod2019_sh_jak12", price = 17000, amount = 3, pricesep = 6800 },
+		{ name = "725", entity = "arc9_cod2019_sh_725", price = 19000, amount = 2, pricesep = 7200 },
 	},
-	{
-		name = "AUG",
-		entity = "arccw_go_aug",
-		price = 20000,
-		amount = 4,
-		separate = true,
-		pricesep = 7200,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Rifles",
+
+	SMGs = {
+		allowedTeams = { TEAM_GUN, TEAM_MOB },
+		{ name = "MP5", entity = "arc9_cod2019_sm_mp5", price = 19000, amount = 2, pricesep = 7000 },
+		{ name = "MP7", entity = "arc9_cod2019_sm_mp7", price = 22000, amount = 2, pricesep = 8000 },
+		{ name = "MP9", entity = "arc9_cod2019_sm_cx9", price = 20000, amount = 2, pricesep = 7500 },
+		{ name = "UMP-45", entity = "arc9_cod2019_sm_iso", price = 21000, amount = 3, pricesep = 7500 },
+		{ name = "Striker45", entity = "arc9_cod2019_sm_striker45", price = 20000, amount = 3, pricesep = 7200 },
+		{ name = "Vector", entity = "arc9_cod2019_sm_vector", price = 21000, amount = 2, pricesep = 7500 },
+		{ name = "Uzi", entity = "arc9_cod2019_sm_uzi", price = 18000, amount = 3, pricesep = 6500 },
+		{ name = "Bizon", entity = "arc9_cod2019_sm_bizon", price = 21000, amount = 2, pricesep = 7500 },
+		{ name = "P90", entity = "arc9_cod2019_sm_p90", price = 18000, amount = 3, pricesep = 6500 },
 	},
-	{
-		name = "M4A4",
-		entity = "arccw_go_m4",
-		price = 23000,
-		amount = 3,
-		separate = true,
-		pricesep = 8200,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Rifles",
-	},
-	{
-		name = "SCAR-20",
-		entity = "arccw_go_scar",
-		price = 26000,
-		amount = 2,
-		separate = true,
-		pricesep = 9500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Rifles",
-	},
-	{
-		name = "AR-15",
-		entity = "arccw_go_ar15",
-		price = 18000,
-		amount = 4,
-		separate = true,
-		pricesep = 6500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Rifles",
+
+	Misc = {
+		{
+			name = "Strela Launcher",
+			entity = "arc9_cod2019_la_strela",
+			price = 30000,
+			amount = 2,
+			pricesep = 10000,
+			allowed = { TEAM_MAYOR, TEAM_CHIEF },
+		},
+		{
+			name = "40mm M32",
+			entity = "arc9_cod2019_la_m32",
+			price = 28000,
+			amount = 3,
+			pricesep = 9000,
+			allowed = { TEAM_MAYOR, TEAM_CHIEF },
+		},
+		{
+			name = "RPG",
+			entity = "arc9_cod2019_la_rpg",
+			price = 32000,
+			amount = 2,
+			pricesep = 12000,
+			allowed = { TEAM_MAYOR, TEAM_CHIEF },
+		},
+		{
+			name = "PILA",
+			entity = "arc9_cod2019_la_pila",
+			price = 31000,
+			amount = 2,
+			pricesep = 11500,
+			allowed = { TEAM_MAYOR, TEAM_CHIEF },
+		},
+		{
+			name = "Frag Grenade",
+			entity = "arc9_cod2019_nade_frag",
+			price = 500,
+			amount = 1,
+			pricesep = 500,
+			noship = true,
+			allowed = { TEAM_GUN, TEAM_MOB },
+		},
+		{
+			name = "Claymore",
+			entity = "arc9_cod2019_nade_claymores",
+			price = 1000,
+			amount = 1,
+			pricesep = 1000,
+			noship = true,
+			allowed = { TEAM_GUN, TEAM_MOB },
+		},
+		{
+			name = "Semtex",
+			entity = "arc9_cod2019_nade_semtex",
+			price = 1200,
+			amount = 1,
+			pricesep = 1200,
+			noship = true,
+			allowed = { TEAM_GUN, TEAM_MOB },
+		},
+		{
+			name = "Molotov",
+			entity = "arc9_cod2019_nade_molotov",
+			price = 800,
+			amount = 1,
+			pricesep = 800,
+			noship = true,
+			allowed = { TEAM_GUN, TEAM_MOB },
+		},
+		{
+			name = "Smoke Grenade",
+			entity = "arc9_cod2019_nade_smoke",
+			price = 600,
+			amount = 1,
+			pricesep = 600,
+			noship = true,
+			allowed = { TEAM_GUN, TEAM_MOB },
+		},
+		{
+			name = "Flashbang",
+			entity = "arc9_cod2019_nade_flash",
+			price = 700,
+			amount = 1,
+			pricesep = 700,
+			noship = true,
+			allowed = { TEAM_GUN, TEAM_MOB },
+		},
 	},
 }
 
--- Create the shipments
-for _, shipment in ipairs(rifleShipments) do
-	DarkRP.createShipment(shipment.name, {
-		model = "models/props/cs_office/cardboard_box03.mdl",
-		entity = shipment.entity,
-		price = shipment.price * price_multiplier,
-		amount = shipment.amount,
-		separate = shipment.separate,
-		pricesep = shipment.pricesep * price_multiplier,
-		noship = shipment.noship,
-		allowed = shipment.allowed,
-		category = shipment.category,
+-- Create categories and shipments
+for category, list in pairs(shipments) do
+	DarkRP.createCategory({
+		name = category,
+		categorises = "shipments",
+		startExpanded = true,
+		color = Color(255, 0, 0, 255),
+		canSee = function()
+			return true
+		end,
+		sortOrder = ({ Rifles = 1, LMG = 2, Marksman = 3, Handguns = 4, Shotguns = 5, SMGs = 6, Misc = 7 })[category],
 	})
+	for _, s in ipairs(list) do
+		DarkRP.createShipment(s.name, {
+			model = "models/props/cs_office/cardboard_box03.mdl",
+			entity = s.entity,
+			price = s.price * price_multiplier,
+			amount = s.amount,
+			separate = true,
+			pricesep = s.pricesep * price_multiplier,
+			noship = s.noship or false,
+			allowed = s.allowed or list.allowedTeams or { TEAM_GUN },
+			category = category,
+		})
+	end
 end
-
--- Define the LMG shipments
-local lmgShipments = {
-	{
-		name = "Negev",
-		entity = "arccw_go_negev",
-		price = 32000,
-		amount = 2,
-		separate = true,
-		pricesep = 12000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "LMG",
-	},
-	{
-		name = "M249",
-		entity = "arccw_go_m249para",
-		price = 35000,
-		amount = 2,
-		separate = true,
-		pricesep = 13000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "LMG",
-	},
-}
-
--- Create the LMG shipments
-for _, shipment in ipairs(lmgShipments) do
-	DarkRP.createShipment(shipment.name, {
-		model = "models/props/cs_office/cardboard_box03.mdl",
-		entity = shipment.entity,
-		price = shipment.price * price_multiplier,
-		amount = shipment.amount,
-		separate = shipment.separate,
-		pricesep = shipment.pricesep * price_multiplier,
-		noship = shipment.noship,
-		allowed = shipment.allowed,
-		category = shipment.category,
-	})
-end
-
--- Define the Marksman shipments
-local marksmanShipments = {
-	{
-		name = "SSG 08",
-		entity = "arccw_go_ssg08",
-		price = 21000,
-		amount = 3,
-		separate = true,
-		pricesep = 7500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Marksman",
-	},
-	{
-		name = "AWP",
-		entity = "arccw_go_awp",
-		price = 30000,
-		amount = 2,
-		separate = true,
-		pricesep = 11000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Marksman",
-	},
-}
-
--- Create the Marksman shipments
-for _, shipment in ipairs(marksmanShipments) do
-	DarkRP.createShipment(shipment.name, {
-		model = "models/props/cs_office/cardboard_box03.mdl",
-		entity = shipment.entity,
-		price = shipment.price * price_multiplier,
-		amount = shipment.amount,
-		separate = shipment.separate,
-		pricesep = shipment.pricesep * price_multiplier,
-		noship = shipment.noship,
-		allowed = shipment.allowed,
-		category = shipment.category,
-	})
-end
-
--- Define the Handguns shipments
-local handgunsShipments = {
-	{
-		name = "Desert Eagle",
-		entity = "arccw_go_deagle",
-		price = 10000,
-		amount = 3,
-		separate = true,
-		pricesep = 4000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Handguns",
-	},
-	{
-		name = "Glock",
-		entity = "arccw_go_glock",
-		price = 9500,
-		amount = 3,
-		separate = true,
-		pricesep = 3800,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Handguns",
-	},
-	{
-		name = "P250",
-		entity = "arccw_go_p250",
-		price = 9000,
-		amount = 4,
-		separate = true,
-		pricesep = 3500,
-		noship = false,
-		allowed = { TEAM_GUN, TEAM_MOB },
-		category = "Handguns",
-	},
-	{
-		name = "CZ75",
-		entity = "arccw_go_cz75",
-		price = 11000,
-		amount = 3,
-		separate = true,
-		pricesep = 4500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Handguns",
-	},
-	{
-		name = "Five-SeveN",
-		entity = "arccw_go_fiveseven",
-		price = 12000,
-		amount = 3,
-		separate = true,
-		pricesep = 5000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Handguns",
-	},
-	{
-		name = "Tec-9",
-		entity = "arccw_go_tec9",
-		price = 11000,
-		amount = 3,
-		separate = true,
-		pricesep = 4500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Handguns",
-	},
-	{
-		name = "USP-S",
-		entity = "arccw_go_usp",
-		price = 9500,
-		amount = 3,
-		separate = true,
-		pricesep = 3800,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Handguns",
-	},
-	{
-		name = "P2000",
-		entity = "arccw_go_p2000",
-		price = 9000,
-		amount = 4,
-		separate = true,
-		pricesep = 3500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Handguns",
-	},
-}
-
--- Create the Handguns shipments
-for _, shipment in ipairs(handgunsShipments) do
-	DarkRP.createShipment(shipment.name, {
-		model = "models/props/cs_office/cardboard_box03.mdl",
-		entity = shipment.entity,
-		price = shipment.price * price_multiplier,
-		amount = shipment.amount,
-		separate = shipment.separate,
-		pricesep = shipment.pricesep * price_multiplier,
-		noship = shipment.noship,
-		allowed = shipment.allowed,
-		category = shipment.category,
-	})
-end
-
--- Define the Shotguns shipments
-local shotgunsShipments = {
-	{
-		name = "Nova",
-		entity = "arccw_go_nova",
-		price = 15000,
-		amount = 3,
-		separate = true,
-		pricesep = 5500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Shotguns",
-	},
-	{
-		name = "MAG-7",
-		entity = "arccw_go_mag7",
-		price = 18000,
-		amount = 3,
-		separate = true,
-		pricesep = 6500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Shotguns",
-	},
-	{
-		name = "M1014",
-		entity = "arccw_go_m1014",
-		price = 20000,
-		amount = 2,
-		separate = true,
-		pricesep = 7500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Shotguns",
-	},
-	{
-		name = "870",
-		entity = "arccw_go_870",
-		price = 16000,
-		amount = 3,
-		separate = true,
-		pricesep = 6000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "Shotguns",
-	},
-}
-
--- Create the Shotguns shipments
-for _, shipment in ipairs(shotgunsShipments) do
-	DarkRP.createShipment(shipment.name, {
-		model = "models/props/cs_office/cardboard_box03.mdl",
-		entity = shipment.entity,
-		price = shipment.price * price_multiplier,
-		amount = shipment.amount,
-		separate = shipment.separate,
-		pricesep = shipment.pricesep * price_multiplier,
-		noship = shipment.noship,
-		allowed = shipment.allowed,
-		category = shipment.category,
-	})
-end
-
--- Define the SMGs shipments
-local smgsShipments = {
-	{
-		name = "MP5",
-		entity = "arccw_go_mp5",
-		price = 19000,
-		amount = 2,
-		separate = true,
-		pricesep = 7000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "SMGs",
-	},
-	{
-		name = "MP7",
-		entity = "arccw_go_mp7",
-		price = 22000,
-		amount = 2,
-		separate = true,
-		pricesep = 8000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "SMGs",
-	},
-	{
-		name = "MP9",
-		entity = "arccw_go_mp9",
-		price = 20000,
-		amount = 2,
-		separate = true,
-		pricesep = 7500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "SMGs",
-	},
-	{
-		name = "UMP-45",
-		entity = "arccw_go_ump",
-		price = 18000,
-		amount = 3,
-		separate = true,
-		pricesep = 6500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "SMGs",
-	},
-	{
-		name = "MAC-10",
-		entity = "arccw_go_mac10",
-		price = 16000,
-		amount = 3,
-		separate = true,
-		pricesep = 6000,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "SMGs",
-	},
-	{
-		name = "PP-Bizon",
-		entity = "arccw_go_bizon",
-		price = 21000,
-		amount = 2,
-		separate = true,
-		pricesep = 7500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "SMGs",
-	},
-	{
-		name = "P90",
-		entity = "arccw_go_p90",
-		price = 18000,
-		amount = 3,
-		separate = true,
-		pricesep = 6500,
-		noship = false,
-		allowed = { TEAM_GUN },
-		category = "SMGs",
-	},
-}
--- Create the SMGs shipments
-for _, shipment in ipairs(smgsShipments) do
-	DarkRP.createShipment(shipment.name, {
-		model = "models/props/cs_office/cardboard_box03.mdl",
-		entity = shipment.entity,
-		price = shipment.price * price_multiplier,
-		amount = shipment.amount,
-		separate = shipment.separate,
-		pricesep = shipment.pricesep * price_multiplier,
-		noship = shipment.noship,
-		allowed = shipment.allowed,
-		category = shipment.category,
-	})
-end
-
---Add missing categories:
-DarkRP.createCategory({
-	name = "Rifles",
-	categorises = "shipments",
-	startExpanded = true,
-	color = Color(255, 0, 0, 255),
-	canSee = function(ply)
-		return true
-	end,
-	sortOrder = 1,
-})
-
-DarkRP.createCategory({
-	name = "LMG",
-	categorises = "shipments",
-	startExpanded = true,
-	color = Color(255, 0, 0, 255),
-	canSee = function(ply)
-		return true
-	end,
-	sortOrder = 2,
-})
-
-DarkRP.createCategory({
-	name = "Marksman",
-	categorises = "shipments",
-	startExpanded = true,
-	color = Color(255, 0, 0, 255),
-	canSee = function(ply)
-		return true
-	end,
-	sortOrder = 3,
-})
-
-DarkRP.createCategory({
-	name = "Handguns",
-	categorises = "shipments",
-	startExpanded = true,
-	color = Color(255, 0, 0, 255),
-	canSee = function(ply)
-		return true
-	end,
-	sortOrder = 4,
-})
-
-DarkRP.createCategory({
-	name = "Shotguns",
-	categorises = "shipments",
-	startExpanded = true,
-	color = Color(255, 0, 0, 255),
-	canSee = function(ply)
-		return true
-	end,
-	sortOrder = 5,
-})
-
-DarkRP.createCategory({
-	name = "Snipers",
-	categorises = "shipments",
-	startExpanded = true,
-	color = Color(255, 0, 0, 255),
-	canSee = function(ply)
-		return true
-	end,
-	sortOrder = 6,
-})
-
-DarkRP.createCategory({
-	name = "SMGs",
-	categorises = "shipments",
-	startExpanded = true,
-	color = Color(255, 0, 0, 255),
-	canSee = function(ply)
-		return true
-	end,
-	sortOrder = 7,
-})
-
-DarkRP.createCategory({
-	name = "Misc",
-	categorises = "shipments",
-	startExpanded = true,
-	color = Color(255, 0, 0, 255),
-	canSee = function(ply)
-		return true
-	end,
-	sortOrder = 1,
-})
-
---Other category
-DarkRP.createShipment("Rocket Launcher", {
-	model = "models/props/cs_office/cardboard_box03.mdl",
-	entity = "weapon_rpg",
-	price = 6000 * price_multiplier,
-	amount = 10,
-	category = "Misc",
-	separate = true,
-	pricesep = 6000 * price_multiplier,
-	noship = true,
-	allowed = { TEAM_MAYOR, TEAM_CHIEF },
-})
-
-DarkRP.createShipment("SLAM", {
-	model = "models/weapons/w_slam.mdl",
-	entity = "weapon_slam",
-	price = 500 * price_multiplier,
-	amount = 1,
-	separate = true,
-	pricesep = 500 * price_multiplier,
-	noship = true,
-	allowed = { TEAM_MAYOR, TEAM_CHIEF, TEAM_TERROR },
-	category = "Misc",
-	-- CustomCheck
-})
-
-DarkRP.createShipment("Frag Grenade", {
-	model = "models/weapons/w_eq_fraggrenade.mdl",
-	entity = "weapon_frag",
-	price = 500 * price_multiplier,
-	amount = 1,
-	separate = true,
-	pricesep = 500 * price_multiplier,
-	noship = true,
-	allowed = { TEAM_MAYOR, TEAM_CHIEF, TEAM_TERROR },
-	category = "Misc",
-	-- CustomCheck
-})

