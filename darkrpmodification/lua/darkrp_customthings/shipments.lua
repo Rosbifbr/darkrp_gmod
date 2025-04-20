@@ -45,7 +45,7 @@ local shipments = {
 	},
 
 	Handguns = {
-		allowedTeams = { TEAM_GUN, TEAM_MOB },
+		allowedTeams = { TEAM_GUN, TEAM_MOB, TEAM_MAYOR },
 		{ name = ".50 GS", entity = "arc9_cod2019_pi_50gs", price = 10000, amount = 3, pricesep = 4000 },
 		{ name = "Sykov", entity = "arc9_cod2019_pi_sykov", price = 9000, amount = 4, pricesep = 3500 },
 		{ name = ".357", entity = "arc9_cod2019_pi_357", price = 9500, amount = 3, pricesep = 3800 },
@@ -72,11 +72,11 @@ local shipments = {
 	},
 
 	SMGs = {
-		allowedTeams = { TEAM_GUN, TEAM_MOB },
+		allowedTeams = { TEAM_GUN, TEAM_MOB, TEAM_MAYOR },
 		{ name = "MP5", entity = "arc9_cod2019_sm_mp5", price = 19000, amount = 2, pricesep = 7000 },
 		{ name = "MP7", entity = "arc9_cod2019_sm_mp7", price = 22000, amount = 2, pricesep = 8000 },
 		{ name = "MP9", entity = "arc9_cod2019_sm_cx9", price = 20000, amount = 2, pricesep = 7500 },
-		{ name = "UMP-45", entity = "arc9_cod2019_sm_iso", price = 21000, amount = 3, pricesep = 7500 },
+		{ name = "Iso", entity = "arc9_cod2019_sm_iso", price = 21000, amount = 3, pricesep = 7500 },
 		{ name = "Striker45", entity = "arc9_cod2019_sm_striker45", price = 20000, amount = 3, pricesep = 7200 },
 		{ name = "Vector", entity = "arc9_cod2019_sm_vector", price = 21000, amount = 2, pricesep = 7500 },
 		{ name = "Uzi", entity = "arc9_cod2019_sm_uzi", price = 18000, amount = 3, pricesep = 6500 },

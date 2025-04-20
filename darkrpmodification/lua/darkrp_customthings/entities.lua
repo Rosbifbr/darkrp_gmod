@@ -343,7 +343,7 @@ DarkRP.createEntity("Turbo", {
 	price = price_multiplier * 10000,
 	max = 2,
 	cmd = "buyturbo",
-	category = "Cars",
+	category = "Cars - Repair",
 })
 
 DarkRP.createEntity("Wheel", {
@@ -352,7 +352,7 @@ DarkRP.createEntity("Wheel", {
 	price = price_multiplier * 1000,
 	max = 2,
 	cmd = "buywheel",
-	category = "Cars",
+	category = "Cars - Repair",
 })
 
 DarkRP.createEntity("Compressor", {
@@ -361,7 +361,7 @@ DarkRP.createEntity("Compressor", {
 	price = price_multiplier * 10000,
 	max = 2,
 	cmd = "buycompressor",
-	category = "Cars",
+	category = "Cars - Repair",
 })
 
 DarkRP.createEntity("Jerrycan", {
@@ -370,7 +370,7 @@ DarkRP.createEntity("Jerrycan", {
 	price = price_multiplier * 1000,
 	max = 4,
 	cmd = "buyjerrycan",
-	category = "Cars",
+	category = "Cars - Repair",
 })
 
 DarkRP.createEntity("Jerrycan Diesel", {
@@ -379,7 +379,36 @@ DarkRP.createEntity("Jerrycan Diesel", {
 	price = price_multiplier * 1000,
 	max = 4,
 	cmd = "buyjerrycandiesel",
-	category = "Cars",
+	category = "Cars - Repair",
+})
+
+DarkRP.createEntity("Repair Torch", {
+	ent = "weapon_lvsrepair",
+	model = "models/props_c17/consolebox01a.mdl",
+	price = price_multiplier * 1500,
+	max = 4,
+	cmd = "buyrepairtorch",
+	category = "Cars - Repair",
+})
+
+DarkRP.createEntity("Mines", {
+	ent = "weapon_lvsmines",
+	model = "models/props_c17/consolebox01a.mdl",
+	price = price_multiplier * 1500,
+	max = 4,
+	cmd = "buymines",
+	category = "Cars - Repair",
+  allowed = {TEAM_POLICE},
+})
+
+DarkRP.createEntity("Spike Strip", {
+	ent = "weapon_lvsspikestrip",
+	model = "models/props_c17/consolebox01a.mdl",
+	price = price_multiplier * 1500,
+	max = 4,
+	cmd = "buyspike",
+	category = "Cars - Repair",
+  allowed = {TEAM_POLICE},
 })
 
 -- AIRCRAFT
@@ -536,6 +565,17 @@ DarkRP.createEntity("Vault Security Hacker", {
 --Categories
 DarkRP.createCategory({
 	name = "Cars",
+	categorises = "entities",
+	startExpanded = true,
+	color = Color(0, 107, 0, 255),
+	canSee = function(ply)
+		return true
+	end,
+	sortOrder = 100,
+})
+
+DarkRP.createCategory({
+	name = "Cars - Repair",
 	categorises = "entities",
 	startExpanded = true,
 	color = Color(0, 107, 0, 255),
