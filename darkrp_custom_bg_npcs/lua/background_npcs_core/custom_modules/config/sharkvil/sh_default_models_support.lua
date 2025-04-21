@@ -62,6 +62,7 @@ if IsValidConfig("police") then
 	police.class = "npc_citizen"
 	police.weapons = {
 		-- SMGs
+		"arc9_cod2019_pi_m1911",
 		"arc9_cod2019_sm_uzi",
 	}
 	police.models = {
@@ -73,6 +74,7 @@ end
 
 if IsValidConfig("special_forces") then
 	local sf = bgNPC.cfg.npcs_template["special_forces"]
+	sf.npc = "npc_metropolice"
 	sf.random_skin = true
 	sf.random_bodygroups = true
 	sf.default_models = false
@@ -88,6 +90,7 @@ end
 
 if IsValidConfig("special_forces_2") then
 	local sf2 = bgNPC.cfg.npcs_template["special_forces_2"]
+	sf2.npc = "npc_metropolice"
 	sf2.random_skin = true
 	sf2.random_bodygroups = true
 	sf2.default_models = false
